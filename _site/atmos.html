@@ -19,7 +19,7 @@
 
 
 
-<title>Инструкция по использованию чипованных консолей - Взлом Switch</title>
+<title>Запуск Atmosphere - Взлом Switch</title>
 
 
 
@@ -33,11 +33,11 @@
 
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Взлом Switch">
-<meta property="og:title" content="Инструкция по использованию чипованных консолей">
+<meta property="og:title" content="Запуск Atmosphere">
 
 
-  <link rel="canonical" href="https://switch.customfw.xyz/hardmoded.html">
-  <meta property="og:url" content="https://switch.customfw.xyz/hardmoded.html">
+  <link rel="canonical" href="https://switch.customfw.xyz/atmos.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/atmos.html">
 
 
 
@@ -316,14 +316,14 @@
  
   
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Инструкция по использованию чипованных консолей">
+    <meta itemprop="headline" content="Запуск Atmosphere">
     
     
     
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Инструкция по использованию чипованных консолей
+          <h1 class="page__title" itemprop="headline">Запуск Atmosphere
 </h1>
           
         </header>
@@ -335,7 +335,17 @@
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#запуск-cfw" id="markdown-toc-запуск-cfw">Запуск CFW</a></li>
+  <li><a href="#что-понадобится" id="markdown-toc-что-понадобится">Что понадобится</a></li>
+  <li><a href="#инструкция" id="markdown-toc-инструкция">Инструкция</a>    <ul>
+      <li><a href="#подготовительные-работы" id="markdown-toc-подготовительные-работы">Подготовительные работы</a></li>
+      <li><a href="#запуск-atmosphere" id="markdown-toc-запуск-atmosphere">Запуск Atmosphere</a></li>
+      <li><a href="#layeredfs---переводы-и-модификации-игр" id="markdown-toc-layeredfs---переводы-и-модификации-игр">LayeredFS - переводы и модификации игр</a></li>
+    </ul>
+  </li>
+  <li><a href="#запуск-homebrew-launcher" id="markdown-toc-запуск-homebrew-launcher">Запуск Homebrew Launcher</a></li>
+  <li><a href="#запуск-игр" id="markdown-toc-запуск-игр">Запуск игр</a></li>
+  <li><a href="#полезные-инструкции" id="markdown-toc-полезные-инструкции">Полезные инструкции</a></li>
+  <li><a href="#активация-autorcm" id="markdown-toc-активация-autorcm">Активация AutoRCM</a></li>
 </ul>
 
   </nav>
@@ -351,16 +361,59 @@
 
 <hr />
 
-<p>Есть несколько важных отличий при работе с чипованной приставкой, которые нужно понимать:</p>
+<p>Хоть в текущем виде эту <abbr title="Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так">CFW</abbr> и не следовало бы называть Atmosphere, для удобства мы будем продолжать это делать. В данный момент это скорее официальная прошивка с запущенными модулями от Atmosphere</p>
+
+<p><a href="launch-cfw#atmosphere" target="_blank">Подробнее про Atmosphere</a></p>
+
+<h2 id="что-понадобится">Что понадобится</h2>
+
+<ul>
+  <li>Умение <a href="fusee-gelee#%D1%87%D0%B0%D1%81%D1%82%D1%8C-i---%D0%B2%D1%85%D0%BE%D0%B4-%D0%B2-rcm" target="_blank">вводить консоль в режим восстановления (RCM)</a></li>
+  <li>Свежая версия <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr></li>
+</ul>
+
+<h2 id="инструкция">Инструкция</h2>
+
+<h3 id="подготовительные-работы">Подготовительные работы</h3>
 
 <ol>
-  <li>Если приставка не включается на зарядке, снимите её с зарядки, если после этого она не включилась, подержите кнопку (POWER) 20 секунд и попробуйте включить ещё раз.</li>
-  <li>Если приставка не включается, подержите кнопку (POWER) 20 секунд и попробуйте включить.</li>
+  <li><a href="update-to-latest" target="_blank">Обновите приставку до <strong>8.1.0</strong></a>, если версия вашей текущей прошивки ниже
+    <ul>
+      <li>На прошивках ниже, чем <strong>8.1.0</strong> прошивка будет работать, но возможны глюки разного рода</li>
+      <li>Если вы перешли сюда из инструкции по обновлению прошивки, то, очевидно, вам не нужно снова переходить в инструкцию по обновлению прошивик. Просто запустите кастом, а потом вернитесь к выполнению инструкции по обновлению. Меня очень беспокоит то, что это нужно объяснять.</li>
+    </ul>
+  </li>
+  <li>Выключите Switch и вставьте его карту памяти в ПК</li>
+  <li>Установите <code class="highlighter-rouge">.7z</code>-архив <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr>, согласно инструкции в репозитории, если ещё не делали этого</li>
+  <li><code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr> - это hekate, с её помощью мы будем запускать прошивку через <a href="fusee-gelee" target="_blank">Fusée Gelée</a>.</li>
+  <li>Вставьте карту в консоль</li>
 </ol>
+
+<h3 id="запуск-atmosphere">Запуск Atmosphere</h3>
+
+<ol>
+  <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a></li>
+</ol>
+
+<p class="notice--warning">Если после входа в прошивку приставка не видит карту и требует обновить прошивку для её работы, либо просто зависает в черном экране после логотипа Nintendo, вам нужно установить драйвера exFAT, <a href="update-to-latest" target="_blank">обновив прошивку следующим образом</a>! Даже если у вас уже установлена последняя прошивка, но нет драйверов exFAT, обновите приставку указанным образом, либо официально через настройки! Помните, что если вы обновлялись до последней версии с помощью <a href="update-to-latest" target="_blank">безопасного обновления</a>, обновление через настройки <a href="update-to-latest#теоретическая-часть" target="_blank">сожжёт предохранители</a>!</p>
+
+<p class="notice--info">В hekate по-умолчанию настроен автозапуск. То есть при запуске приставки меню hekate не будет отображаться, а запустится сразу прошивка. Для перехода в меню hekate зажмите (VOL-) во время появления сплеш-скрина.</p>
+
+<h3 id="layeredfs---переводы-и-модификации-игр">LayeredFS - переводы и модификации игр</h3>
+
+<p><strong>LayeredFS</strong> - патч, который позволяет изменять данные игры в оперативной памяти на данные, находящиеся на карте памяти. С помощью этого патча работают переводы и моды</p>
+
+<ul>
+  <li>Папка, в которую нужно складывать модификации находится на карте памяти по адресу <code class="highlighter-rouge">\atmosphere\titles\TITLEID</code>, где “TITLEID” - 16-ти символьный код, соответствующий коду вашей игры. Обычно в архиве с модификациями лежит именно эта папка.</li>
+  <li>Если при запуске игры зажать (R), то она запустится с отключённым LayeredFS, а значит безо всяких модификаций</li>
+</ul>
 
 <hr />
 
-<h2 class="notice--success" id="запуск-cfw"><a href="launch-cfw">Запуск CFW</a></h2>
+<h1 class="notice--success" id="запуск-homebrew-launcher"><a href="launch-hbl">Запуск Homebrew Launcher</a></h1>
+<h1 class="notice--success" id="запуск-игр"><a href="games">Запуск игр</a></h1>
+<h1 class="notice--success" id="полезные-инструкции"><a href="addons">Полезные инструкции</a></h1>
+<h1 class="notice--success" id="активация-autorcm"><a href="autorcm">Активация AutoRCM</a></h1>
 
 				
         

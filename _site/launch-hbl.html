@@ -334,6 +334,15 @@
 <aside class="sidebar__right">
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#что-понадобится" id="markdown-toc-что-понадобится">Что понадобится</a></li>
+  <li><a href="#подготовительные-работы" id="markdown-toc-подготовительные-работы">Подготовительные работы</a></li>
+  <li><a href="#инструкция" id="markdown-toc-инструкция">Инструкция</a>    <ul>
+      <li><a href="#часть-i---запуск-hbl" id="markdown-toc-часть-i---запуск-hbl">Часть I - Запуск HBL</a></li>
+      <li><a href="#часть-ii---работа-с-hbl" id="markdown-toc-часть-ii---работа-с-hbl">Часть II - Работа с HBL</a></li>
+    </ul>
+  </li>
+</ul>
 
   </nav>
 </aside>
@@ -348,10 +357,71 @@
 
 <hr />
 
-<script>
-location.href = 'hbl';
-</script>
+<h1 id="что-понадобится">Что понадобится</h1>
 
+<ul>
+  <li><a href="launch-cfw" target="_blank">Запущенная CFW</a></li>
+  <li>Свежая версия <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr></li>
+</ul>
+
+<h1 id="подготовительные-работы">Подготовительные работы</h1>
+
+<ol>
+  <li>Выключите Switch и вставьте его карту памяти в ПК</li>
+  <li>Установите <code class="highlighter-rouge">.7z</code>-архив <abbr title="Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a></abbr>, согласно инструкции в репозитории, если ещё не делали этого</li>
+  <li>Вставьте карту памяти в консоль и запустите <a href="launch-cfw" target="_blank">выбранный <abbr title="Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так">кастом</abbr></a></li>
+</ol>
+
+<h1 id="инструкция">Инструкция</h1>
+
+<h2 id="часть-i---запуск-hbl">Часть I - Запуск HBL</h2>
+
+<p>Homebrew Launcher (launch-hbl) - среда для запуска самописных приложений для Switch. Запуск производится через изменённое приложение Альбомы</p>
+
+<p class="text-center notice--info"><img src="/images/screenshots/gallery.jpg" alt="" /></p>
+
+<p><strong>Для пользователей <a href="atmos" target="_blank">Atmosphere</a></strong></p>
+<ol>
+  <li>Запустите любую игру, удерживая клавишу (R), чтобы попасть в HBL</li>
+</ol>
+
+<p class="notice--info">Вы по прежнему можете использовать и альбомы, однако рекомендуется запускать программы через игру. Так приложения смогут иметь доступ ко всему объёму памяти консоли</p>
+
+<p><strong>Для пользователей <a href="rajnx" target="_blank">RajNX</a> (при обновлении с прошивки 1.0.0 - 3.0.0)</strong></p>
+<ol>
+  <li>Запустите Альбомы, чтобы попасть в HBL</li>
+</ol>
+
+<p><strong>Для пользователей <a href="sxos" target="_blank">SX OS</a>:</strong></p>
+<ol>
+  <li>Запустите Альбом, чтобы попасть в HBL</li>
+  <li>С помощью (R) листайте на вкладку HOMEBREW</li>
+</ol>
+
+<h2 id="часть-ii---работа-с-hbl">Часть II - Работа с HBL</h2>
+
+<ol>
+  <li>Для установки приложений хоумбрю просто скопируйте файл <code class="highlighter-rouge">.nro</code> в папку <code class="highlighter-rouge">/switch/</code> на SD-карте.
+    <ul>
+      <li>Помните, что при извлечении карты памяти приставка перезагрузится и вам, после того, как вы скопируете приложения на карту и вставите её в Switch, снова придётся запускать CFW. Используйте доступ по <a href="ftp" target="_blank">FTP</a> с помощью приложения ftpd, чтобы избежать этого</li>
+    </ul>
+  </li>
+  <li>Список доступных приложений ищите в <a href="https://www.switchbru.com/appstore/#/" target="_blank">Switch Appstore</a></li>
+</ol>
+
+<div class="notice--warning">
+<p>Если в списке приложений пусто, снимите с файлов архивные атрибуты:</p>
+
+<ul>
+  <li>Запустите hekate и перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Archive bit - AutoRCM</strong> (в нижней части экрана), выберите <strong>Fix archive bit (except Nintendo folder)</strong></li>
+</ul>
+
+<p class="notice--danger">Не меняйте атрибуты папки Nintendo!</p>
+</div>
+
+<ul>
+  <li><a href="https://vk.com/@pg_testing-homebrew-apps-for-switch">Список полезных Homebrew приложений для Switch</a></li>
+</ul>
 
 				
         
@@ -376,8 +446,7 @@ location.href = 'hbl';
   
 </div>
 
-    <a href="#" class="scrollup">Наверх</a>
-
+    
     <div class="page__footer-container">
       <footer class="page__footer">
         
@@ -404,7 +473,7 @@ location.href = 'hbl';
 
       </footer>
     </div>
-
+    <a href="#" class="scrollup">Наверх</a>
     
 
 
