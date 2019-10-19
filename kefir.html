@@ -335,7 +335,7 @@
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#kefir-320" id="markdown-toc-kefir-320">KEFIR 320</a>    <ul>
+  <li><a href="#kefir-321" id="markdown-toc-kefir-321">KEFIR 321</a>    <ul>
       <li><a href="#внимание" id="markdown-toc-внимание"><strong>ВНИМАНИЕ!</strong></a></li>
       <li><a href="#состав-kefir" id="markdown-toc-состав-kefir">Состав kefir</a></li>
       <li><a href="#changelog" id="markdown-toc-changelog">Changelog</a></li>
@@ -357,7 +357,7 @@
 
 <hr />
 
-<h2 id="kefir-320">KEFIR 320</h2>
+<h2 id="kefir-321">KEFIR 321</h2>
 
 <p>В контексте этого руководства - сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Подробнее про кефир <a href="https://vk.com/@switchopen-sostav-kefirachast-pervaya-obschaya-informaciya-o-sostave" target="_blank">здесь</a></p>
 
@@ -376,21 +376,23 @@
 <h3 id="состав-kefir">Состав kefir</h3>
 
 <ul>
-  <li>Atmosphere 0.9.4 или SXOS 2.9 beta</li>
+  <li>Atmosphere или SXOS</li>
   <li>Поддерживает запуск через <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или <a href="caffeine" target="_blank">Caffeine</a></li>
-  <li><a href="https://github.com/CTCaer/hekate/releases/latest" target="_blank">hekate 5</a> и <a href="https://github.com/Joonie86/hekate/releases/latest" target="_blank">ACID-патчи для неё</a></li>
+  <li><a href="https://github.com/CTCaer/hekate/releases/latest" target="_blank">hekate</a> и <a href="https://github.com/Joonie86/hekate/releases/latest" target="_blank">ACID-патчи для неё</a></li>
   <li>Homebrew
     <ul>
-      <li><a href="https://github.com/Povstalez/Kefir-Updater/releases/latest" target="_blank">Kefir Updater 0.3.1</a> - программа для обновления kefir через интернет</li>
-      <li><a href="https://github.com/FlagBrew/Checkpoint/releases/latest" target="_blank">Checkpoint 3.7.2</a> - программа для <a href="checkpoint" target="_blank">резервного копирования и восстановления сейвов</a></li>
+      <li><a href="https://github.com/Povstalez/Kefir-Updater/releases/latest" target="_blank">Kefir Updater</a> - программа для обновления kefir через интернет</li>
+      <li><a href="https://github.com/team-mercure/mercury/releases" target="_blank">mercury</a> - проприетарный файловый менеджер от blawar. Необходим для работы tinfoil</li>
+      <li><a href="https://github.com/joel16/NX-Shell/releases/latest" target="_blank">NX-Shell</a> - файловый менеджер</li>
+      <li><a href="https://github.com/FlagBrew/Checkpoint/releases/latest" target="_blank">Checkpoint</a> - программа для <a href="checkpoint" target="_blank">резервного копирования и восстановления сейвов</a></li>
       <li><a href="https://github.com/shchmue/Lockpick_RCM/releases/latest" target="_blank">Lockpick_RCM</a> - программа для <a href="backup-nand#часть-iii---дампим-ключи" target="_blank">дампа ключей приставки</a></li>
-      <li><a href="https://github.com/Cpasjuste/pplay/releases/latest" target="_blank">pplay 2.1</a> - видеоплеер</li>
+      <li><a href="https://github.com/Cpasjuste/pplay/releases/latest" target="_blank">pplay</a> - видеоплеер</li>
       <li><a href="https://discord.io/homebrew" target="_blank">/hbg/shop 5.1.0</a> - программа, позволяющая <a href="tinfoil" target="_blank">качать игры</a> для приставки прямо из сети</li>
-      <li><a href="https://switchtools.sshnuke.net/" target="_blank">ChoiDujourNX 1.0.2</a> - программа для <a href="update-to-latest" target="_blank">безопасного обновления</a> версии системного ПО приставки</li>
+      <li><a href="https://switchtools.sshnuke.net/" target="_blank">ChoiDujourNX </a> - программа для <a href="update-to-latest" target="_blank">безопасного обновления</a> версии системного ПО приставки</li>
       <li><a href="https://github.com/liuervehc/nxmtp/releases/latest" target="_blank">nxmtp</a> - программа, монтирующая карту памяти Switch в виде MTP-устройства. Подключите приставку к ПК кабелем и запустите программу</li>
-      <li><a href="https://github.com/exelix11/SwitchThemeInjector/releases/latest" target="_blank">NXThemes Installer 2.1.0</a> - менеджер кастомных тем</li>
-      <li>DBI-19 for NSP-installing - программа для <a href="games" target="_blank">установки игр</a> по USB или с карты памяти</li>
-      <li><a href="https://sx.xecuter.com/" target="_blank">SXInstaller 1.5.2</a> (SXOS only) - аналог tinfoil для SXOS</li>
+      <li><a href="https://github.com/exelix11/SwitchThemeInjector/releases/latest" target="_blank">NXThemes Installer</a> - менеджер кастомных тем</li>
+      <li>DBI - программа для <a href="games" target="_blank">установки игр</a> по USB или с карты памяти</li>
+      <li><a href="https://sx.xecuter.com/" target="_blank">SXInstaller</a> (SXOS only) - аналог tinfoil для SXOS</li>
     </ul>
   </li>
 </ul>
@@ -399,15 +401,15 @@
 
 <h3 id="changelog">Changelog</h3>
 
-<p>Tinfoil нужно запускать из Альбомов, удерживая ZL
-Checkpoint нужно запускать из HBL в режиме тайтла!
-Для этого удерживая (R) запускайте игру, кнопку держите пока не запустится HBL!
-И уже из него запускаем Checkpoint!</p>
+<p>Tinfoil и Checkpoint запускаются только из HBL в режиме тайтла. 
+Для запуска HBL в режиме тайтла запустите любую игру, удерживая зажатой
+клавишу R до тех пор, пока не запустится HBL.</p>
 
 <ul>
   <li>[Обновлено] Tinfoil 5.1.0</li>
   <li>[Обновлено] NxThemesInstaller 2.11</li>
   <li>[Обновлено] DBI v39 - теперь поддерживает установку XCI / CXCI</li>
+  <li>[Возвращено] ТЧ-Shell 2.11</li>
 </ul>
 
 <hr />
@@ -458,29 +460,7 @@ Checkpoint нужно запускать из HBL в режиме тайтла!
       <li><code class="highlighter-rouge">4200000000000010</code></li>
     </ul>
   </li>
-  <li>Удалите из корня вашей карты памяти следующие папки и файлы (если они есть):
-    <ul>
-      <li><code class="highlighter-rouge">ReiNX</code></li>
-      <li><code class="highlighter-rouge">RajNX</code></li>
-      <li><code class="highlighter-rouge">sxos</code></li>
-      <li><code class="highlighter-rouge">bootloader\ini\sxos.ini</code></li>
-      <li><code class="highlighter-rouge">bootloader\ini\atmosphere.ini</code></li>
-      <li><code class="highlighter-rouge">bootloader\ini\reinx.ini</code></li>
-      <li><code class="highlighter-rouge">bootloader\ini\rajnx.ini</code></li>
-      <li><code class="highlighter-rouge">bootloader\payloads\sxos.bin</code></li>
-      <li><code class="highlighter-rouge">bootloader\payloads\reinx.bin</code></li>
-      <li><code class="highlighter-rouge">bootloader\payloads\rajnx.bin</code></li>
-      <li><code class="highlighter-rouge">bootloader\payloads\payload.bin</code></li>
-      <li><code class="highlighter-rouge">bootloader\payloads\fusee-primary.bin</code></li>
-      <li><code class="highlighter-rouge">atmosphere</code></li>
-      <li><code class="highlighter-rouge">config</code></li>
-      <li><code class="highlighter-rouge">tinfoil</code></li>
-      <li><code class="highlighter-rouge">rajnx_ipl.ini</code></li>
-      <li><code class="highlighter-rouge">switch\n1dus.nro</code></li>
-      <li><code class="highlighter-rouge">switch\ftpd.nro</code></li>
-      <li><code class="highlighter-rouge">switch\tinfoil.nro</code></li>
-    </ul>
-  </li>
+  <li>Удалите из корня вашей карты памяти все папки, кроме папки <code class="highlighter-rouge">titles</code> и <code class="highlighter-rouge">Nintendo</code>, если они там есть</li>
 </ol>
 
 <h3 id="для-установки-atmosphere">Для установки Atmosphere</h3>
