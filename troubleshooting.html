@@ -349,6 +349,13 @@
 
 </div></details>
 
+<details class="spoiler"><summary class="spoiler-title">После запуска приставки ошибка на чёрном фоне с надписью "Panic occured while running Atmosphere."</summary><div class="spoiler-body">
+<p><strong>О:</strong> Обратите внимание на числа во второй строке после <strong>Title:</strong>. Эти числа указывают на то, какой тайтл вызвал ошибку и из-за которого не загружается приставка. Если номер тайтла <strong>не</strong> <code class="highlighter-rouge">010000000000000D</code>, то перейдите в папку <code class="highlighter-rouge">atmosphere/titles</code> и удалите папку с номером, указанным на экране вашей приставки во второй строке. Если номер тайтла - <code class="highlighter-rouge">010000000000000D</code>, то вероятнее всего ошибка вызвана тем, что какое-то хомбрю запущено в режиме апплета и ему не хватает памяти.</p>
+
+<p class="text-center notice--info"><img src="/images/screenshots/atmos_title_error.png" alt="" /></p>
+
+</div></details>
+
 <details class="spoiler"><summary class="spoiler-title">После запуска хомбрю ошибка на фиолетовом фоне с надписью Error Code и номером ошибки</summary><div class="spoiler-body">
 <p><strong>О:</strong> Вы запускаете программу из режима апплета (Applet mode), то есть из Альбомов, тогда как делать это нужно в режиме тайла (Tile mode), то есть через игру или форвардер. Как правильно запускать HBL описано в <a href="hbl" target="_blank">инструкции</a>. Режим апплета не даёт запускаемой программе полного доступа ко всему объему оперативной памяти в приставке, отчего и случаются ошибки.</p>
 
@@ -359,8 +366,19 @@
 
 </div></details>
 
-<details class="spoiler"><summary class="spoiler-title">Постоянные ошибки, игры вылетают или не запускаются</summary><div class="spoiler-body">
-<p><strong>О:</strong> Проверьте свою SD-карту на ошибки с помощью <a href="http://3ds.customfw.xyz/h2testw-windows" target="_blank">H2testw (Windows)</a>, <a href="http://3ds.customfw.xyz/f3-linux" target="_blank">F3 (Linux)</a>, или <a href="http://3ds.customfw.xyz/f3x-mac" target="_blank">F3X (Mac)</a>!</p>
+<details class="spoiler"><summary class="spoiler-title">Постоянные ошибки, игры вылетают</summary><div class="spoiler-body">
+<p><strong>О:</strong> Проверьте свою SD-карту на ошибки с помощью <a href="http://3ds.customfw.xyz/h2testw-windows" target="_blank">H2testw (Windows)</a>, <a href="http://3ds.customfw.xyz/f3-linux" target="_blank">F3 (Linux)</a>, или <a href="http://3ds.customfw.xyz/f3x-mac" target="_blank">F3X (Mac)</a>! Если карта в порядке, скопируйте папку Nintendo из корня карты памяти на ваш ПК, <a href="https://customfw.xyz/format_sd" target="_blank">отформатируйте её</a>, а затем установите кефир через скрипт.</p>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Не запускается ни одна игра. При запуске идёт проверка, затем ошибка</summary><div class="spoiler-body">
+<p><strong>О:</strong> Возможно, вы удалили тикеты всех игр. Для переустановки тикетов, запустите <a href="games" target="_blank">tinfoil</a>, перейдите на вкладку “<strong>Тикеты</strong>”, и для каждой игры проделайте следующее:</p>
+<ol>
+  <li>На игре нажмите (Y)</li>
+  <li>Нажмите (R)</li>
+  <li>Включите опцию “<strong>Установить Ticket</strong>”</li>
+  <li>Нажмите “<strong>Начать установку</strong>”</li>
+</ol>
 
 </div></details>
 
