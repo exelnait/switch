@@ -339,6 +339,7 @@
 <p>Выберите один из методов:</p>
 
 <details class="spoiler"><summary class="spoiler-title">Замена имеющихся аккаунтов на связанный в автоматическом режиме</summary><div class="spoiler-body">
+<details class="spoiler"><summary class="spoiler-title">Замена аккаунтов</summary><div class="spoiler-body">
 <p class="notice--danger"><strong>ВНИМАНИЕ!!</strong> ОБЯЗАТЕЛЬНО сделайте <a href="backup-saves" target="_blank">резервные копии сохранений</a> со всех ваших аккаунтов! Метод не добавляет связанный аккаунт, а заменяет все имеющиеся аккаунты на приставке на связанный аккаунт! Таким образом, к концу инструкции у вас будет всего один аккаунт, но привязанный к учётной записи Nintendo, так что вам придётся создать все нужные аккаунты заново и восстановить сохранения из резервной копии!</p>
 
 <p class="notice--info">Если ваша прошивка 9.0.1\вы недавно делали резервную копию NAND\обновляли кефир, то пропустите то действие, которое вы выполняли недавно</p>
@@ -350,21 +351,34 @@
  </span>
 </span> по инструкции из репозитория, если не делали этого ранее</li>
   <li>Обновите <a href="update-to-latest" target="_blank">прошивку приставки</a></li>
-  <li>Создайте <a href="backup-nand" target="_blank">резервную копию NAND</a> консоли и поместите её в надёжное место</li>
-  <li><a href="block-update" target="_blank">Заблокируйте доступ к серверам Nintendo</a>, если ещё не делали этого</li>
-  <li>Подключите приставку к интернету</li>
+  <li>Создайте <a href="backup-nand" target="_blank">резервную копию NAND</a> консоли и поместите её в надёжное место, если ещё не сделали этого</li>
   <li>Запустите прошивку</li>
   <li>Сделайте <a href="backup-saves" target="_blank">резервные копии сохранений</a> со всех ваших аккаунтов</li>
   <li>Запустите <a href="hbl" target="_blank">Homebrew Launcher</a></li>
-  <li>Запустите <strong>Kefir Updater</strong></li>
-  <li>Выберите пункт <strong>“Add linked account”</strong></li>
-  <li>Выберите <strong>“Inject”</strong></li>
-  <li>Выберите <strong>“Yes”</strong> для того, чтобы начать закачку файлов аккаунта и внедрения их в систему</li>
-  <li>Дождитесь окончания закачки</li>
-  <li>Выберите <strong>“Yes”</strong> для перезагрузки</li>
+  <li>Запустите <strong>Link Account</strong></li>
+  <li>Выберите пункт <strong>“Link Account”</strong></li>
+  <li>Выберите <strong>“Link”</strong></li>
+  <li>Выберите <strong>“Si”</strong> для того, чтобы начать закачку файлов аккаунта и внедрения их в систему</li>
+  <li>Выберите <strong>“Si”</strong> для перезагрузки</li>
 </ol>
 
 <p class="notice--info">После перезагрузки в вашей системе будет всего один аккаунт, но привязанный к учётной записи Nintendo. Если необходимо, создайте дополнительные аккаунты, но не удаляйте привязанный! <a href="backup-saves#восстановление-резервных-копий-сохранений" target="_blank">Восстановите сохранения из резервной копии</a>, если это необходимо!</p>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Восстановление аккаунтов, что были до замены</summary><div class="spoiler-body">
+<ol>
+  <li>Вставьте карту памяти в ПК</li>
+  <li>Перейдите в папку <code class="highlighter-rouge">/switch/UserLink/</code></li>
+  <li>Удалите папку <code class="highlighter-rouge">su</code></li>
+  <li>Перейдите в папку <code class="highlighter-rouge">sume</code> и переместите папку <code class="highlighter-rouge">su</code> из неё на директорию выше (то есть в папку <code class="highlighter-rouge">/switch/UserLink/</code>)</li>
+  <li>Сделайте замену аккаунтов
+    <ul>
+      <li>В итоге после замены, ваш привязанный аккаунт окажется в папке <code class="highlighter-rouge">sume</code></li>
+    </ul>
+  </li>
+</ol>
+
+</div></details>
 
 </div></details>
 
