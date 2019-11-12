@@ -334,12 +334,6 @@
 <aside class="sidebar__right">
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
-<ul class="toc__menu" id="markdown-toc">
-  <li><a href="#что-понадобится" id="markdown-toc-что-понадобится">Что понадобится</a></li>
-  <li><a href="#установка-emuiibo" id="markdown-toc-установка-emuiibo">Установка emuiibo</a></li>
-  <li><a href="#использование-emuiibo" id="markdown-toc-использование-emuiibo">Использование emuiibo</a></li>
-  <li><a href="#обратите-внимание" id="markdown-toc-обратите-внимание">Обратите внимание:</a></li>
-</ul>
 
   </nav>
 </aside>
@@ -354,82 +348,53 @@
 
 <hr />
 
-<p class="notice--warning">Эмуляцию Amiibo поддерживают <strong>только</strong> Atmosphere и ReiNX!</p>
+<p>https://github.com/XorTroll/emuiibo/</p>
 
-<h3 id="что-понадобится">Что понадобится</h3>
+<!--Эмуляцию Amiibo поддерживают **только** Atmosphere и ReiNX! 
+{: .notice--warning}
 
-<ul>
-  <li>Свежая версия <a href="https://github.com/XorTroll/emuiibo/releases/latest" target="_blank">emuiibo</a></li>
-  <li>Дампы Amiibo у <a href="https://discord.io/homebrew" target="_blank">бота в Discord</a>
-    <ul>
-      <li>Канал request-bot, команда <code class="highlighter-rouge">!Amiibo</code> для закачки архива со всеми всех Amiibo
-        <ul>
-          <li>Команда <code class="highlighter-rouge">!Amiibo</code> %название_Amiibo% для получения дампа конкретной фигурки</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+### Что понадобится 
 
-<h3 id="установка-emuiibo">Установка emuiibo</h3>
+* Свежая версия [emuiibo](https://github.com/XorTroll/emuiibo/releases/latest){:target="_blank"}
+* Дампы Amiibo у [бота в Discord](https://discord.io/homebrew){:target="_blank"}
+	* Канал request-bot, команда `!Amiibo` для закачки архива со всеми всех Amiibo 
+		* Команда `!Amiibo` %название_Amiibo% для получения дампа конкретной фигурки
+	
+### Установка emuiibo 
 
-<ol>
-  <li>Выключите приставку и вставьте карту памяти консоли в ПК</li>
-  <li>Обновите <span class="tooltip"><a href="kefir" target="_blank">kefir</a>
- <span class="bottom">
-     Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
- </span>
-</span> по инструкции из репозитория.</li>
-  <li>Перейдите в папку <code class="highlighter-rouge">atmosphere/titles</code> и удалите из неё папку <code class="highlighter-rouge">0100000000000352</code></li>
-  <li>Скачайте свежую версию <a href="https://github.com/XorTroll/emuiibo/releases/latest" target="_blank">emuiibo</a> и переместите папку <code class="highlighter-rouge">atmosphere</code> из архива в корень вашей карты памяти</li>
-  <li>Скопируйте нужные Amiibo в папку <code class="highlighter-rouge">emuiibo</code> в корне вашей карты памяти
-    <ul>
-      <li>Рекомендую копировать только необходимые, поскольку Amiibo переключаются циклически и если вы скопируете все сразу, будет очень сложно ориентироваться в дампах</li>
-      <li>Что дают Amiibo можно посмотреть в официальном <a href="https://www.nintendo.com/amiibo/compatibility/#amiibo" target="_blank">гайде от Nintendo</a></li>
-    </ul>
-  </li>
-  <li>Вставьте карту памяти в консоль и запустите <a href="cfw" target="_blank">прошивку</a></li>
-</ol>
+1. Выключите приставку и вставьте карту памяти консоли в ПК
+1. Обновите <span class="tooltip">[kefir](kefir){:target="_blank"}
+	<span class="bottom">
+		Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+	</span>
+</span> по инструкции из репозитория. 
+1. Перейдите в папку `atmosphere/titles` и удалите из неё папку `0100000000000352`
+1. Скачайте свежую версию [emuiibo](https://github.com/XorTroll/emuiibo/releases/latest){:target="_blank"} и переместите папку `atmosphere` из архива в корень вашей карты памяти
+1. Скопируйте нужные Amiibo в папку `emuiibo` в корне вашей карты памяти
+	* Рекомендую копировать только необходимые, поскольку Amiibo переключаются циклически и если вы скопируете все сразу, будет очень сложно ориентироваться в дампах 
+	* Что дают Amiibo можно посмотреть в официальном [гайде от Nintendo](https://www.nintendo.com/amiibo/compatibility/#amiibo){:target="_blank"}
+1. Вставьте карту памяти в консоль и запустите [прошивку](cfw){:target="_blank"}
+	
+### Использование emuiibo
 
-<h3 id="использование-emuiibo">Использование emuiibo</h3>
+1. Запустите игру, в которой собираетесь использовать Amiibo и перейдите в режим использования Amiibo, если это необходимо
+	* Помните, что в некоторых играх использование Amiibo доступно только при определённых условиях, или требует включения в настройках игры. Если не знаете как активировать Amiibo в конкретной игре, найдите ролик на youtube с примером использования фигруки 
+1. Работа с Emuiibo осуществляется с помощью горячих клавиш: 
+	* **Для включения эмуляции Amiibo** нажмите (**R-Stick**) + (**D-Pad Up**)
+	* **Для отключения** нажмите (**R-Stick**) + (**D-Pad Down**)
+	* **Для единоразового включения** эмуляции Amiibo один раз нажмите (**R-Stick**) + (**D-Pad Right**). Эмулирует ваш дамп Amiibo, после чего Emuiibo отключается автоматически
+		* Эмулируется последняя активированная amiibo. В этом режиме вы не сможете переключать дампы, поскольку сразу после активации Emuiibo останавливает работу. 
+	* **Для переключения Amiibo** нажмите (**R-Stick**) + (**D-Pad Left**). Переключается на следующий Amiibo в вашей emuiibo директории. 
+		* Эффект есть только тогда, когда включена эмуляция Amiibo (первый пункт)
 
-<ol>
-  <li>Запустите игру, в которой собираетесь использовать Amiibo и перейдите в режим использования Amiibo, если это необходимо
-    <ul>
-      <li>Помните, что в некоторых играх использование Amiibo доступно только при определённых условиях, или требует включения в настройках игры. Если не знаете как активировать Amiibo в конкретной игре, найдите ролик на youtube с примером использования фигруки</li>
-    </ul>
-  </li>
-  <li>Работа с Emuiibo осуществляется с помощью горячих клавиш:
-    <ul>
-      <li><strong>Для включения эмуляции Amiibo</strong> нажмите (<strong>R-Stick</strong>) + (<strong>D-Pad Up</strong>)</li>
-      <li><strong>Для отключения</strong> нажмите (<strong>R-Stick</strong>) + (<strong>D-Pad Down</strong>)</li>
-      <li><strong>Для единоразового включения</strong> эмуляции Amiibo один раз нажмите (<strong>R-Stick</strong>) + (<strong>D-Pad Right</strong>). Эмулирует ваш дамп Amiibo, после чего Emuiibo отключается автоматически
-        <ul>
-          <li>Эмулируется последняя активированная amiibo. В этом режиме вы не сможете переключать дампы, поскольку сразу после активации Emuiibo останавливает работу.</li>
-        </ul>
-      </li>
-      <li><strong>Для переключения Amiibo</strong> нажмите (<strong>R-Stick</strong>) + (<strong>D-Pad Left</strong>). Переключается на следующий Amiibo в вашей emuiibo директории.
-        <ul>
-          <li>Эффект есть только тогда, когда включена эмуляция Amiibo (первый пункт)</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ol>
+### Обратите внимание:
 
-<h3 id="обратите-внимание">Обратите внимание:</h3>
-
-<ul>
-  <li>Emuiibo не поддерживает SX OS</li>
-  <li>Если Emuiibo активирован правильно, то на правом джой-коне моргнёт светодиод</li>
-  <li>Если ваш дамп Amiibo имеет больше 10 букв в названии, он будет закодирован в Emuiibo</li>
-  <li>Дамп Amiibo должен быть в <code class="highlighter-rouge">.bin</code> формате, и весить 540 байт (может чуть больше)
-    <ul>
-      <li>В архиве в Discord все дампы корректные</li>
-    </ul>
-  </li>
-  <li>Дампы Amiibo должны хранится исключительно в папке <code class="highlighter-rouge">emuiibo</code> в корне SD карты</li>
-</ul>
+* Emuiibo не поддерживает SX OS
+* Если Emuiibo активирован правильно, то на правом джой-коне моргнёт светодиод 
+* Если ваш дамп Amiibo имеет больше 10 букв в названии, он будет закодирован в Emuiibo
+* Дамп Amiibo должен быть в `.bin` формате, и весить 540 байт (может чуть больше)
+	* В архиве в Discord все дампы корректные 
+* Дампы Amiibo должны хранится исключительно в папке `emuiibo` в корне SD карты-->
 
 				
         
