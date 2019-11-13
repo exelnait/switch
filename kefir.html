@@ -335,7 +335,7 @@
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#kefir-330" id="markdown-toc-kefir-330">KEFIR 330</a>    <ul>
+  <li><a href="#kefir-331" id="markdown-toc-kefir-331">KEFIR 331</a>    <ul>
       <li><a href="#внимание" id="markdown-toc-внимание"><strong>ВНИМАНИЕ!</strong></a></li>
       <li><a href="#состав-kefir" id="markdown-toc-состав-kefir">Состав kefir</a></li>
       <li><a href="#changelog" id="markdown-toc-changelog">Changelog</a></li>
@@ -357,7 +357,7 @@
 
 <hr />
 
-<h2 id="kefir-330">KEFIR 330</h2>
+<h2 id="kefir-331">KEFIR 331</h2>
 
 <p>В контексте этого руководства - сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Подробнее про кефир <a href="https://vk.com/@switchopen-sostav-kefirachast-pervaya-obschaya-informaciya-o-sostave" target="_blank">здесь</a>. Зачем он нужен? Всё очень просто. Кефир содержит в себе самое полезное и проверенное временем ПО, которое в свежем кефире всегда идёт актуальной версии. Кефир устанавливается с помощью скрипта, который написан таким образом, чтобы удалять при установке все проблемные модули, из-за которых система моет работать нестабильно или не работать вовсе. При возникновении проблем, достаточно назвать версию кефира, чтобы сразу стало ясно какое именно ПО и какой версии сейчас на вашей приставке.</p>
 
@@ -380,18 +380,19 @@
   <li><a href="https://github.com/CTCaer/hekate/releases/latest" target="_blank">hekate</a> и <a href="https://github.com/Joonie86/hekate/releases/latest" target="_blank">ACID-патчи для неё</a></li>
   <li>Homebrew
     <ul>
-      <li><a href="https://github.com/Povstalez/Kefir-Updater/releases/latest" target="_blank">Kefir Updater</a> - программа для обновления kefir через интернет</li>
+      <li><a href="https://github.com/rashevskyv/kefir-updater/releases" target="_blank">Kefir Updater</a> - программа для обновления kefir через интернет</li>
       <li><a href="https://github.com/team-mercure/mercury/releases" target="_blank">mercury</a> - проприетарный файловый менеджер от blawar. Необходим для работы tinfoil</li>
       <li><a href="https://github.com/joel16/NX-Shell/releases/latest" target="_blank">NX-Shell</a> - файловый менеджер</li>
       <li><a href="https://github.com/FlagBrew/Checkpoint/releases/latest" target="_blank">Checkpoint</a> - программа для <a href="checkpoint" target="_blank">резервного копирования и восстановления сейвов</a></li>
       <li><a href="https://github.com/shchmue/Lockpick_RCM/releases/latest" target="_blank">Lockpick_RCM</a> - программа для <a href="backup-nand#часть-iii---дампим-ключи" target="_blank">дампа ключей приставки</a></li>
       <li><a href="https://github.com/Cpasjuste/pplay/releases/latest" target="_blank">pplay</a> - видеоплеер</li>
-      <li><a href="https://discord.io/homebrew" target="_blank">/hbg/shop 6.0.0</a> - программа, позволяющая <a href="tinfoil" target="_blank">качать игры</a> для приставки прямо из сети</li>
+      <li><a href="https://discord.gg/qxdYtrJ" target="_blank">/hbg/shop 6.0.1</a> - программа, позволяющая <a href="tinfoil" target="_blank">качать игры</a> для приставки прямо из сети</li>
       <li><a href="https://switchtools.sshnuke.net/" target="_blank">ChoiDujourNX </a> - программа для <a href="update-to-latest" target="_blank">безопасного обновления</a> версии системного ПО приставки</li>
       <li><a href="https://github.com/liuervehc/nxmtp/releases/latest" target="_blank">nxmtp</a> - программа, монтирующая карту памяти Switch в виде MTP-устройства. Подключите приставку к ПК кабелем и запустите программу</li>
       <li><a href="https://github.com/exelix11/SwitchThemeInjector/releases/latest" target="_blank">NXThemes Installer</a> - менеджер кастомных тем</li>
       <li>DBI - программа для <a href="games" target="_blank">установки игр</a> по USB или с карты памяти</li>
       <li><a href="https://sx.xecuter.com/" target="_blank">SXInstaller</a> (SXOS only) - аналог tinfoil для SXOS</li>
+      <li><a href="https://github.com/cathery/sys-con/releases/latest" target="_blank">sys-con</a> - модуль, позволяющий подключать к консоли по USB практически любые геймпады</li>
     </ul>
   </li>
 </ul>
@@ -404,14 +405,9 @@
 любую игру, удерживая зажатой клавишу R до тех пор, пока не запустится HBL.</p>
 
 <ul>
-  <li>[Обновлено] SXOS 2.9.2 - вышел в релиз из беты</li>
-  <li>[Добавлено] SXOS Autoloader 1.0.1 - модуль, позволяющий монтировать игры прямо с главного экрана</li>
-  <li>[Обновлено] Tinfoil 6.0.0 - много всего. Главное - при запуске из альбомов автоматом ставится 
-и запускается форвардер. И багфиксы</li>
-  <li>[Обновлено] DBI 47 - багфиксы</li>
-  <li>[Обновлено] Lockpick_RCM - багфиксы</li>
-  <li>[Обновлено] Kefir Updater - полностью новое приложение на базе исходников Atmosphere Updater</li>
-  <li>[Обновлено] LinkUser - приложение для привязки аккаунта вынесено отдельно</li>
+  <li>[Обновлено] Tinfoil 6.0.1 - багфиксы</li>
+  <li>[Обновлено] pPlay 3.0 - перекомпелировано для совместимости с 9+, багфиксы</li>
+  <li>[Добавлено] sys-con 0.4.2 - модуль для атмосферы, позволяющий по USB подключить почти любые контроллеры</li>
 </ul>
 
 <hr />
