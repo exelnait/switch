@@ -451,77 +451,141 @@
 
 <details class="spoiler"><summary class="spoiler-title">Способ I - Установка по USB (рекомендуемый)</summary><div class="spoiler-body">
 <h3 id="подготовительные-работы-выполняются-единоразово">Подготовительные работы (выполняются единоразово)</h3>
-
-<details class="spoiler"><summary class="spoiler-title">Установка драйверов</summary><div class="spoiler-body">
+<details class="spoiler"><summary class="spoiler-title">Windows</summary><div class="spoiler-body">
 <p class="notice--warning">Необходимо сделать только раз для корректной работы установки по USB</p>
 
-<p class="notice--warning">Пользователи mac и linux пропускают установку драйверов</p>
-
-<ul>
-  <li>Свежая версия <a href="https://zadig.akeo.ie/" target="_blank"><code class="highlighter-rouge">Zadig.exe</code></a>
-Эти драйвера отличаются от тех, что используются для передачи пейлоада на switch! Если вы ни разу не устанавливали игры этим методом, ставить драйвера нужно обязательно!</li>
-</ul>
+<p class="notice--warning">Эти драйвера отличаются от тех, что используются для передачи пейлоада на switch! Если вы ни разу не устанавливали игры этим методом, ставить драйвера нужно обязательно!</p>
 
 <ol>
-  <li>Выполните <a href="games#подготовительные-работы" target="_blank">подготовительные работы</a>, если ещё не сделали этого</li>
-  <li>Подключите switch к ПК по USB</li>
-  <li>На ПК запустите <a href="https://zadig.akeo.ie/" target="_blank"><code class="highlighter-rouge">Zadig.exe</code></a> от имени Администратора
-    <ul>
-      <li>Если программа не видит Switch, <a href="hbl" target="_blank">запустите на консоли DBI</a> и попробуйте еще раз</li>
-    </ul>
-  </li>
-  <li>В верхнем поле (на изображении ‘1’) вы должны увидеть строку “<strong>libnx USB comms</strong>” или “<strong>Nintendo Switch</strong>”
-    <ul>
-      <li>Если вместо “<strong>libnx USB comms</strong>” или “<strong>Nintendo Switch</strong>” вы видите “<strong>Unknown Device</strong>”, подключите switch в другой USB и перезапустите ПК, после чего вернитесь к установке драйвера</li>
-      <li>Если там ничего нет, пробуйте подключиться в другой USB-порт, перезагрузить ПК, сменить кабель</li>
-    </ul>
+  <li>
+    <p>На ПК запустите <a href="https://zadig.akeo.ie/" target="_blank"><code class="highlighter-rouge">Zadig.exe</code></a> от имени Администратора</p>
 
-    <p class="text-center notice--info"><img src="/images/screenshots/zadig.png" alt="" /></p>
+    <p class="text-center notice--info"><img src="/images/screenshots/zadig.jpg" alt="" /></p>
   </li>
-  <li>В поле “<strong>Driver</strong>” (на изображении ‘2’) выберите <code class="highlighter-rouge">libusbK (v3.0.7.0)</code></li>
-  <li>Нажмите “<strong>Install Driver</strong>” (‘3’)</li>
+  <li>В поле “<strong>Driver</strong>” выберите <code class="highlighter-rouge">libusbK (v3.0.7.0)</code></li>
+  <li>Нажмите “<strong>Install Driver</strong>”</li>
   <li>После успешной установки драйвера нажмите “<strong>Close</strong>” и закройте программу</li>
+  <li>Скачайте программу <a href="files/dbibackend.zip" target="_blank">dbibackend</a> и распакуйте архив с ней в удобную папку</li>
+</ol>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Linux</summary><div class="spoiler-body">
+<h4 id="установка-среды-для-работы-программы">Установка среды для работы программы</h4>
+<ol>
+  <li>Скачайте программу <a href="files/dbibackend.zip" target="_blank">dbibackend</a> и распакуйте архив с ней в удобную папку</li>
+  <li>Установите python 3.7 на ваш ПК
+    <ul>
+      <li>Можете воспользоваться <a href="https://andreyex.ru/ubuntu/kak-ustanovit-python-3-7-v-ubuntu-18-04">этой инструкцией</a>, если не знаете как</li>
+    </ul>
+  </li>
+  <li>Установите <code class="highlighter-rouge">pip</code>
+    <ul>
+      <li><code class="highlighter-rouge">curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</code></li>
+      <li><code class="highlighter-rouge">python get-pip.py</code></li>
+    </ul>
+  </li>
+  <li>Установите <code class="highlighter-rouge">pyusb</code>
+    <ul>
+      <li><code class="highlighter-rouge">pip3 install pyusb</code></li>
+    </ul>
+  </li>
+  <li>Установите <code class="highlighter-rouge">tkinter</code>
+    <ul>
+      <li><code class="highlighter-rouge">sudo apt-get install python-tk</code></li>
+    </ul>
+  </li>
+  <li>Перейдите в папку со скриптом</li>
+  <li>Сделайте скрипт исполняемым файлом
+    <ul>
+      <li><code class="highlighter-rouge">chmod +x dbibackend</code></li>
+    </ul>
+  </li>
+  <li>Запустите <code class="highlighter-rouge">dbibackend</code>
+    <ul>
+      <li><code class="highlighter-rouge">./dbibackend</code></li>
+    </ul>
+  </li>
 </ol>
 
 </div></details>
 
-<details class="spoiler"><summary class="spoiler-title">Настройка ПО</summary><div class="spoiler-body">
+<details class="spoiler"><summary class="spoiler-title">MacOS</summary><div class="spoiler-body">
 <ol>
-  <li>Скачайте программу <a href="https://github.com/developersu/ns-usbloader/releases/latest" target="_blank">ns-usbloader</a> и поместите её в удобную папку</li>
-  <li>Скачайте и установите <a href="https://java.com/ru/download/" target="_blank">JRE</a> для вашей ОС</li>
-  <li>Запустите <a href="https://github.com/developersu/ns-usbloader/releases/latest" target="_blank"><code class="highlighter-rouge">ns-usbloader.jar</code></a></li>
-  <li>
-    <p>В главном окне программы выберите <strong>Tinfoil</strong> и <strong>USB</strong></p>
-
-    <p class="text-center notice--info"><img src="/images/screenshots/nsu.png" alt="" /></p>
+  <li>Скачайте программу <a href="files/dbibackend.zip" target="_blank">dbibackend</a> и распакуйте архив с ней в удобную папку</li>
+  <li>Установите <a href="https://www.python.org/downloads/release/python-376/">python 3.7</a> на ваш ПК</li>
+  <li>Установите <code class="highlighter-rouge">pyusb</code>
+    <ul>
+      <li><code class="highlighter-rouge">pip3 install pyusb</code></li>
+    </ul>
   </li>
-  <li>
-    <p>Перейдите в настройки программы и установите галочку напротив пункта “<strong>Разрешить выбирать XCI файлы для TinFoil</strong>”</p>
-
-    <p class="text-center notice--info"><img src="/images/screenshots/nsu_setup.png" alt="" /></p>
+  <li>Перейдите в папку со скриптом</li>
+  <li>Сделайте скрипт исполняемым файлом
+    <ul>
+      <li><code class="highlighter-rouge">chmod +x dbibackend</code></li>
+    </ul>
+  </li>
+  <li>Запустите <code class="highlighter-rouge">dbibackend</code>
+    <ul>
+      <li><code class="highlighter-rouge">python3 dbibackend</code></li>
+    </ul>
   </li>
 </ol>
-
+</div></details>
+<details class="spoiler"><summary class="spoiler-title">Добавление dbibackend в контекстное меню вашей ОС (опционально)</summary><div class="spoiler-body">
+<ul>
+  <li><strong>В Windows</strong>:
+    <ol>
+      <li>Нажмите <code class="highlighter-rouge">Win+R</code> и в появившемся окне наберите <code class="highlighter-rouge">shell:sendto</code></li>
+      <li>Поместите в эту папку ярлык программы <a href="files/dbibackend.zip" target="_blank">dbibackend</a>
+        <ul>
+          <li>Вы можете перетащить <a href="files/dbibackend.zip" target="_blank">dbibackend</a> в эту папку правой кнопкой мыши и выбрать “<strong>Создать ярлыки</strong>” в появившемся контекстном меню</li>
+          <li>Вы можете нажать правую кнопку мыши на пустом месте в папке и выбрать “<strong>Создать</strong>” -&gt; “<strong>Ярлык</strong>”, после чего следуйте указаниям мастера</li>
+          <li>Помните, что если вы переместите <code class="highlighter-rouge">dbibackend.exe</code> в другое место, от ярлыки работать перестанут и их придётся создать заново</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li><strong>В Linux</strong>:
+    <ol>
+      <li>Поместите <code class="highlighter-rouge">dbibackend</code> в удобную папку (например, в папку ~/bin)</li>
+      <li>Выполните в терминале <code class="highlighter-rouge">export PATH=$PATH:~/bin</code>, чтобы можно было обратиться к программе из терминала без указания пути</li>
+      <li>Перейдите в папку <code class="highlighter-rouge">/home/%username%/.local/share/nautilus</code>
+        <ul>
+          <li>Пример приведён для Ubuntu с Nautilus. Если у вас другая система, команды могут отличаться</li>
+        </ul>
+      </li>
+      <li>Создайте там пустой файл с понятным названием, например <code class="highlighter-rouge">toSwitch</code> и следующим содержанием:
+        <pre><code>OLDIFS=$IFS
+ IFS=$'\n'
+ dbibackend $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+ IFS=$OLDIFS</code></pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>В MacOS</strong>:
+  У меня нет MacOS, потому я не могу составить для этой системы инструкцию. Если У вас есть мак и вы знаете как повторить подобное - <a href="https://customfw.xyz/contacts">напишите мне</a>. Примерный способ, который я нашёл описан здесь - <a href="https://davidwalsh.name/mac-context-menu">Create Context Menu Items in Mac Finder</a></li>
+</ul>
 </div></details>
 
 <h3 id="установка-игр">Установка игр</h3>
+<p class="notice--warning">Если вы добавили dbibackend в контекстное меню своего ПК, то можете просто выделить файлы, которые хотите установить и в контекстном меню выбрать “<strong>Отправить</strong>” -&gt; “<strong>dbibackend.exe</strong>”, если у вас Windows или “<strong>Send</strong>” -&gt; “<strong>toSwitch</strong>”, если у вас Linux, вместо выполнения первых трёх пунктов.</p>
 
 <ol>
-  <li>На приставке запустите <strong>DBI</strong> через <a href="hbl" target="_blank">Homebrew Launcher</a></li>
-  <li>Подключите консоль к ПК</li>
-  <li>Выберите пункт “<strong>Install title from USB</strong>”</li>
-  <li>Запустите <a href="https://github.com/developersu/ns-usbloader/releases/latest" target="_blank"><code class="highlighter-rouge">ns-usbloader.jar</code></a>
-    <ul>
-      <li>Убедитесь, что в программе выбран <strong>Tinfoil</strong> и <strong>USB</strong></li>
-      <li>Убедитесь, в настройках программы установлена галочка напротив пункта “<strong>Разрешить выбирать XCI файлы для TinFoil</strong>”</li>
-    </ul>
-  </li>
-  <li>Нажмите “<strong>Выбрать .NSP файлы</strong>” и выберите необходимые для установки <code class="highlighter-rouge">.nsp</code>, <code class="highlighter-rouge">.nsz</code> или <code class="highlighter-rouge">.xci</code>
+  <li><strong>На ПК</strong> запустите программу <a href="files/dbibackend.zip" target="_blank"><code class="highlighter-rouge">dbibackend.exe</code></a></li>
+  <li>Нажмите “<strong>Add files</strong>” и выберите необходимые для установки <code class="highlighter-rouge">.nsp</code>, <code class="highlighter-rouge">.nsz</code> или <code class="highlighter-rouge">.xci</code>
     <ul>
       <li>Для выбора нескольких игр, удерживайте клавишу (Ctrl)</li>
+      <li>Для выбора всей папки с играми, выберите “<strong>Add folder</strong>”</li>
     </ul>
   </li>
-  <li>Нажмите “<strong>Отправить в NS</strong>”</li>
+  <li>Нажмите “<strong>Start Server</strong>”</li>
+  <li>Подключите консоль к ПК</li>
+  <li><strong>На приставке</strong> запустите <strong>DBI</strong> через <a href="hbl" target="_blank">Homebrew Launcher</a></li>
+  <li>Выберите пункт “<strong>Install title from USB</strong>”
+    <ul>
+      <li>Вы увидите список выбранных игр на приставки</li>
+    </ul>
+  </li>
   <li>На приставке с помощью клавиши (X) выберите необходимые игры
     <ul>
       <li>Нажмите (Y), если нужно выбрать все или инвертировать выбор</li>
@@ -531,19 +595,18 @@
   <li>Выберите необходимые опции в “<strong>Install options</strong>”
     <ul>
       <li><strong>Install target</strong> - место установки. NAND или Sdcard соответствуют внутренней памяти и карте памяти</li>
-      <li><strong>Ignore version</strong> - указывает на то будет ли игнорироваться параметр версии, прописанный в данных игры при установке. То есть, если игра говорит, что ей нужна прошивка 7.0, а у вас 6.2, то включение этой опции рзрешит установить такую игру
+      <li><strong>Ignore version</strong> - указывает на то будет ли игнорироваться параметр версии, прописанный в данных игры при установке. То есть, если игра говорит, что ей нужна прошивка 7.0, а у вас 6.2, то включение этой опции разрешит установить такую игру
         <ul>
-          <li><strong>Не будет работать, если игра подписана ключем версии выше, чем ваша! <a href="update-to-latest" target="_blank">Обновитесь</a> на прошивку 9.1.0, чтобы не задумываться об этом</strong></li>
+          <li><strong>Не будет работать, если игра подписана ключом версии выше, чем ваша! <a href="update-to-latest" target="_blank">Обновитесь</a> на прошивку 9.1.0, чтобы не задумываться об этом</strong></li>
           <li>Рекомендуемое значение <strong>Yes</strong></li>
         </ul>
       </li>
     </ul>
   </li>
   <li>Выберите <strong>Start install</strong> для начала установки</li>
-  <li>Нажмите (B) для выхода из установщика в папку</li>
+  <li>После окончания установки, нажмите (B) для выхода из установщика</li>
   <li>Нажмите (+) для закрытия программы</li>
 </ol>
-
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Способ II - Установка с карты памяти</summary><div class="spoiler-body">
@@ -566,7 +629,7 @@
       <li><strong>Install target</strong> - место установки. NAND или Sdcard соответствуют внутренней памяти и карте памяти</li>
       <li><strong>Ignore version</strong> - указывает на то будет ли игнорироваться параметр версии, прописанный в данных игры при установке. То есть, если игра говорит, что ей нужна прошивка 7.0, а у вас 6.2, то включение этой опции рзрешит установить такую игру
         <ul>
-          <li><strong>Не будет работать, если игра подписана ключем версии выше, чем ваша! <a href="update-to-latest" target="_blank">Обновитесь</a> на прошивку 9.1.0, чтобы не задумываться об этом</strong></li>
+          <li><strong>Не будет работать, если игра подписана ключом версии выше, чем ваша! <a href="update-to-latest" target="_blank">Обновитесь</a> на прошивку 9.1.0, чтобы не задумываться об этом</strong></li>
           <li>Рекомендуемое значение <strong>Yes</strong></li>
         </ul>
       </li>
