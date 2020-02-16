@@ -335,7 +335,7 @@
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#kefir-411" id="markdown-toc-kefir-411">KEFIR 411</a>    <ul>
+  <li><a href="#kefir-412" id="markdown-toc-kefir-412">KEFIR 412</a>    <ul>
       <li><a href="#внимание" id="markdown-toc-внимание"><strong>ВНИМАНИЕ!</strong></a></li>
       <li><a href="#состав-kefir" id="markdown-toc-состав-kefir">Состав kefir</a></li>
       <li><a href="#changelog" id="markdown-toc-changelog">Changelog</a></li>
@@ -357,7 +357,7 @@
 
 <hr />
 
-<h2 id="kefir-411">KEFIR 411</h2>
+<h2 id="kefir-412">KEFIR 412</h2>
 
 <!--В данный момент всем, у кого прошивка 9.0.1 или ниже рекомендуется использовать [последний релизный кефир](https://github.com/rashevskyv/switch/releases/tag/332){:target="_blank"}. [Кефир 400](https://github.com/rashevskyv/switch/releases){:target="_blank"} предназначен в первую очередь для тех, кто установил себе 9.1.0! Покуда версия пре-релизная, её можно установить только вручную!-->
 
@@ -396,7 +396,12 @@
       <li>DBI - программа для <a href="games" target="_blank">установки игр</a> по USB или с карты памяти</li>
       <li><a href="https://sx.xecuter.com/" target="_blank">SXInstaller</a> (SXOS only) - аналог tinfoil для SXOS</li>
       <li><a href="https://github.com/cathery/sys-con/releases/latest" target="_blank">sys-con</a> - модуль, позволяющий подключать к консоли по USB практически любые геймпады</li>
-      <li><a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/" target="_blank">Tesla Overlay Menu</a> - специальное оверлей-меню для взаимодействия с системой</li>
+      <li><a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/" target="_blank">Tesla Overlay Menu</a> - специальное оверлей-меню для взаимодействия с системой
+        <ul>
+          <li><a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/" target="_blank">ovlEdiZon.ovl</a> - Модуль для <a href="cheats" target="_blank">использования читов</a></li>
+          <li><a href="https://github.com/WerWolv/ovl-sysmodules/releases" target="_blank">ovlSysmodules.ovl</a> - Модуль для включения и отключения установленных системных модулей (как-то разгон, emuuibo и прочее)</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -417,9 +422,12 @@ https://switch.customfw.xyz/games</p>
 с главного экрана так же будет запускаться новая версия!</p>
 
 <ul>
-  <li>[Обновлено] tinfoil 8.0.1</li>
-  <li>[Вернул] [Опционально] DBI v49 для тех, кому мил и дорог NSUSBLoader</li>
-  <li>[Исправления] в логике работы скрипта установки кефира</li>
+  <li>[Обновлено] tinfoil 8.1.0</li>
+  <li>[Добавил] ovlSysmodules.ovl для управления системными модулями 
+  через Tesla Overlay Menu</li>
+  <li>[Изменил] В скрипте при указании прошивки 6.2.0 и выше будет 
+  установлен Tesla Overlay Menu. 
+  В atmo.zip и sxos.zip Teals по-умолчанию не устанавливается!</li>
 </ul>
 
 <hr />
@@ -520,7 +528,7 @@ https://switch.customfw.xyz/games</p>
   <li>Запустите приставку без карты памяти с помощью <code class="highlighter-rouge">payload.bin</code></li>
   <li>Кнопками громкости и кнопкой включения перейдите в меню <strong>tools</strong></li>
   <li>Вставьте карту памяти в приставку</li>
-  <li>Выберите <strong>Fix archive bit (except Nintendo folder)</strong> и дождитесь окончания установки</li>
+  <li>Выберите <strong>Unset archive bit</strong> и дождитесь окончания установки</li>
   <li>Выберите <strong>Back</strong> -&gt; <strong>Launch</strong> - &gt;<strong>YOUR_OS_NAME</strong></li>
 </ol>
 </div></details>
