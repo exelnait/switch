@@ -425,7 +425,7 @@
 <ul>
   <li>Настроенная и работающая <a href="cfw" target="_blank">кастомная прошивка</a></li>
   <li>Умение <a href="fusee-gelee" target="_blank">запускать пейлоады через Fusée Gelée</a></li>
-  <li>Свежая версия <a href="update-to-latest" target="_blank">прошивки приставки</a></li>
+  <li>Свежая версия <a href="update-to-latest" target="_blank">системного ПО приставки</a></li>
   <li>Свежая версия <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
   <span class="bottom">
       Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
@@ -462,8 +462,10 @@
 <p class="notice--warning">Если по какой-то причине у вас возникают проблемы при установке по USB на вашей системе, воспользуйтесь <a href="games-nsul" target="_blank">старым методом установки с помощью NS USB Loader</a>. Этот метод доступен для всех ОС.</p>
 
 <details class="spoiler"><summary class="spoiler-title">Способ I - Установка по USB (рекомендуемый)</summary><div class="spoiler-body">
-<h3 id="подготовительные-работы-выполняются-едино-разово">Подготовительные работы (выполняются едино-разово)</h3>
+<h3 id="установка-игр">Установка игр</h3>
+
 <details class="spoiler"><summary class="spoiler-title">Windows</summary><div class="spoiler-body">
+<details class="spoiler"><summary class="spoiler-title">Windows - Подготовительные работы (выполняются едино-разово)</summary><div class="spoiler-body">
 <p class="notice--warning">Необходимо сделать только раз для корректной работы установки по USB</p>
 
 <p class="notice--warning">Эти драйвера отличаются от тех, что используются для передачи пейлоада на switch! Если вы ни разу не устанавливали игры этим методом, ставить драйвера нужно обязательно!</p>
@@ -487,118 +489,26 @@
   <li>После успешной установки драйвера нажмите “<strong>Close</strong>” и закройте программу</li>
   <li>Скачайте программу <a href="files/dbibackend_win.zip" target="_blank">dbibackend</a> и распакуйте архив с ней в удобную папку</li>
 </ol>
-</div></details>
-
-<details class="spoiler"><summary class="spoiler-title">Linux</summary><div class="spoiler-body">
-<h4 id="установка-среды-для-работы-программы">Установка среды для работы программы</h4>
-<ol>
-  <li>Скачайте программу <a href="files/dbibackend.zip" target="_blank">dbibackend</a> и распакуйте архив с ней в удобную папку</li>
-  <li>Установите python 3.7 на ваш ПК
-    <ul>
-      <li>Можете воспользоваться <a href="https://andreyex.ru/ubuntu/kak-ustanovit-python-3-7-v-ubuntu-18-04">этой инструкцией</a>, если не знаете как</li>
-    </ul>
-  </li>
-  <li>Установите <code class="highlighter-rouge">pip</code>
-    <ul>
-      <li><code class="highlighter-rouge">curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</code></li>
-      <li><code class="highlighter-rouge">python get-pip.py</code></li>
-    </ul>
-  </li>
-  <li>Установите <code class="highlighter-rouge">pyusb</code>
-    <ul>
-      <li><code class="highlighter-rouge">pip3 install pyusb</code></li>
-    </ul>
-  </li>
-  <li>Установите <code class="highlighter-rouge">tkinter</code>
-    <ul>
-      <li><code class="highlighter-rouge">sudo apt-get install python3-tk</code></li>
-    </ul>
-  </li>
-  <li>Перейдите в папку со скриптом</li>
-  <li>Сделайте скрипт исполняемым файлом
-    <ul>
-      <li><code class="highlighter-rouge">chmod +x dbibackend</code></li>
-    </ul>
-  </li>
-  <li>Запустите <code class="highlighter-rouge">dbibackend</code>
-    <ul>
-      <li><code class="highlighter-rouge">./dbibackend</code></li>
-    </ul>
-  </li>
-</ol>
-
-</div></details>
-
-<details class="spoiler"><summary class="spoiler-title">MacOS</summary><div class="spoiler-body">
-<ol>
-  <li>Скачайте программу <a href="files/dbibackend.zip" target="_blank">dbibackend</a> и распакуйте архив с ней в удобную папку</li>
-  <li>Установите <a href="https://www.python.org/downloads/release/python-376/">python 3.7</a> на ваш ПК</li>
-  <li>Установите <code class="highlighter-rouge">pyusb</code>
-    <ul>
-      <li><code class="highlighter-rouge">pip3 install pyusb</code></li>
-    </ul>
-  </li>
-  <li>Установите <strong>brew</strong>
-    <ul>
-      <li><code class="highlighter-rouge">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></li>
-    </ul>
-  </li>
-  <li>Установите <strong>libusb</strong> через brew
-    <ul>
-      <li><code class="highlighter-rouge">brew install libusb</code></li>
-    </ul>
-  </li>
-  <li>Перейдите в папку со скриптом</li>
-  <li>Сделайте скрипт исполняемым файлом
-    <ul>
-      <li><code class="highlighter-rouge">chmod +x dbibackend</code></li>
-    </ul>
-  </li>
-  <li>Запустите <code class="highlighter-rouge">dbibackend</code>
-    <ul>
-      <li><code class="highlighter-rouge">python3 dbibackend</code></li>
-    </ul>
-  </li>
-</ol>
-</div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Добавление dbibackend в контекстное меню вашей ОС (опционально)</summary><div class="spoiler-body">
-<ul>
-  <li><strong>В Windows</strong>:
-    <ol>
-      <li>Нажмите <code class="highlighter-rouge">Win+R</code> и в появившемся окне наберите <code class="highlighter-rouge">shell:sendto</code></li>
-      <li>Поместите в эту папку ярлык программы <a href="files/dbibackend_win.zip" target="_blank">dbibackend</a>
-        <ul>
-          <li>Вы можете перетащить <a href="files/dbibackend.zip" target="_blank">dbibackend</a> в эту папку правой кнопкой мыши и выбрать “<strong>Создать ярлыки</strong>” в появившемся контекстном меню</li>
-          <li>Вы можете нажать правую кнопку мыши на пустом месте в папке и выбрать “<strong>Создать</strong>” -&gt; “<strong>Ярлык</strong>”, после чего следуйте указаниям мастера</li>
-          <li>Помните, что если вы переместите <code class="highlighter-rouge">dbibackend.exe</code> в другое место, от ярлыки работать перестанут и их придётся создать заново</li>
-        </ul>
-      </li>
-    </ol>
+<p class="notice--info">Делается для удобства отправки выбранных для установки игр на консоль ик контекстного меню Windows</p>
+
+<ol>
+  <li>Нажмите <code class="highlighter-rouge">Win+R</code> и в появившемся окне наберите <code class="highlighter-rouge">shell:sendto</code></li>
+  <li>Поместите в эту папку ярлык программы <a href="files/dbibackend_win.zip" target="_blank">dbibackend</a>
+    <ul>
+      <li>Вы можете перетащить <a href="files/dbibackend.zip" target="_blank">dbibackend</a> в эту папку правой кнопкой мыши и выбрать “<strong>Создать ярлыки</strong>” в появившемся контекстном меню</li>
+      <li>Вы можете нажать правую кнопку мыши на пустом месте в папке и выбрать “<strong>Создать</strong>” -&gt; “<strong>Ярлык</strong>”, после чего следуйте указаниям мастера</li>
+      <li>Помните, что если вы переместите <code class="highlighter-rouge">dbibackend.exe</code> в другое место, то ярлык перестанет работать и его придётся создавать заново</li>
+    </ul>
   </li>
-  <li><strong>В Linux</strong>:
-    <ol>
-      <li>Поместите <code class="highlighter-rouge">dbibackend</code> в удобную папку (например, в папку ~/bin)</li>
-      <li>Выполните в терминале <code class="highlighter-rouge">export PATH=$PATH:~/bin</code>, чтобы можно было обратиться к программе из терминала без указания пути</li>
-      <li>Перейдите в папку <code class="highlighter-rouge">/home/%username%/.local/share/nautilus</code>
-        <ul>
-          <li>Пример приведён для Ubuntu с Nautilus. Если у вас другая система, команды могут отличаться</li>
-        </ul>
-      </li>
-      <li>Создайте там пустой файл с понятным названием, например <code class="highlighter-rouge">toSwitch</code> и следующим содержанием:
-        <pre><code>OLDIFS=$IFS
- IFS=$'\n'
- dbibackend $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
- IFS=$OLDIFS</code></pre>
-      </li>
-    </ol>
-  </li>
-  <li><strong>В MacOS</strong>:
-  У меня нет MacOS, потому я не могу составить для этой системы инструкцию. Если У вас есть мак и вы знаете как повторить подобное - <a href="https://customfw.xyz/contacts">напишите мне</a>. Примерный способ, который я нашёл описан здесь - <a href="https://davidwalsh.name/mac-context-menu">Create Context Menu Items in Mac Finder</a></li>
-</ul>
+</ol>
+
 </div></details>
 
-<h3 id="установка-игр">Установка игр</h3>
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Установка игр</summary><div class="spoiler-body">
 <p class="notice--warning">Если вы добавили dbibackend в контекстное меню своего ПК, то можете просто выделить файлы, которые хотите установить и в контекстном меню выбрать “<strong>Отправить</strong>” -&gt; “<strong>dbibackend.exe</strong>”, если у вас Windows или “<strong>Send</strong>” -&gt; “<strong>toSwitch</strong>”, если у вас Linux, вместо выполнения первых трёх пунктов.</p>
 
 <ol>
@@ -638,9 +548,45 @@
   <li>После окончания установки, нажмите (B) для выхода из установщика</li>
   <li>Нажмите (+) для закрытия программы</li>
 </ol>
+
+</div></details>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Linux и MacOS</summary><div class="spoiler-body">
+<p class="notice--info">Установка по USB через указанный способ поддерживает только форматы <code class="highlighter-rouge">NSP</code> и <code class="highlighter-rouge">NSZ</code>!</p>
+
+<ol>
+  <li>Подключите консоль к ПК</li>
+  <li><strong>На приставке</strong> запустите <strong>DBI</strong> через <a href="hbl" target="_blank">Homebrew Launcher</a></li>
+  <li>Нажмите “<strong>Run MTP Responder</strong>”
+    <ul>
+      <li>К вашему ПК примонтируется новое MTP-устройство</li>
+    </ul>
+  </li>
+  <li>Откройте появившееся устройство “<strong>Switch</strong>”</li>
+  <li>Перейдите в папку “<strong>NSP and NSZ install</strong>”</li>
+  <li>Перетяните и скопируйте игры, которые хотите установить в папку “<strong>SDCard</strong>” или “<strong>NAND</strong>”, в зависимости от того, куда вы хотите установить игру
+    <ul>
+      <li>Свободное место в NAND или карте памяти можно оценить в нижней части экрана вашего Switch</li>
+      <li>Не забывайте, что игры в формате NSZ после установки занимают больше места, чем весят сам NSZ-файл
+        <ul>
+          <li>Во время установки NSZ-файла на экране консоли будет отображаться тот размер, который будет занимать игра после установки</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>По окончанию установки, нажмите (X), чтобы остановить MTP-сервер и отмонтировать MTP-устройство</li>
+  <li>Нажмите (START), чтобы закрыть DBI</li>
+</ol>
+
+</div></details>
+
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Способ II - Установка с карты памяти</summary><div class="spoiler-body">
+<p class="notice--warning">Способ не является рекомендованным, поскольку часто вынимать и вставлять карту в приставку может быть опасно для вашего слота и может повредить его! Вы можете перемещать файлы на карту памяти, используя встроенный в DBI MTP-сервер.</p>
+
 <ol>
   <li>Запустите “<strong>DBI</strong>” через <a href="hbl" target="_blank">Homebrew Launcher</a></li>
   <li>Выберите “<strong>Browse SD Card</strong>”</li>
@@ -674,7 +620,7 @@
 
 </div></details>
 
-<details class="spoiler"><summary class="spoiler-title">Установка игр, DLC, обновлений через интернет прямо на приставке (Tinfoil)</summary><div class="spoiler-body">
+<details class="spoiler"><summary class="spoiler-title">Способ III - Установка игр, DLC, обновлений через интернет прямо на приставке (Tinfoil)</summary><div class="spoiler-body">
 <p>С помощью этого приложения игры можно устанавливать напрямую с удалённого сервера в интернете, который постоянно пополняется силами сообщества. По-сути программа является аналогом freeshop для 3DS</p>
 
 <p>Дабы избежать путаницы - это совершенно не тот старый добрый тинфоил без графического интерфейса. Эта совершенно другая программа, имеющая то же название! Старый tinfoil больше не поддерживается и не рекомендуется к использованию. На его место пришёл DBI!</p>
