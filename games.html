@@ -487,40 +487,24 @@
   <li>В поле “<strong>Driver</strong>” выберите <code class="highlighter-rouge">libusbK (v3.0.7.0)</code></li>
   <li>Нажмите “<strong>Install Driver</strong>”</li>
   <li>После успешной установки драйвера нажмите “<strong>Close</strong>” и закройте программу</li>
-  <li>Скачайте программу <a href="files/dbibackend_win.zip" target="_blank">dbibackend</a> и распакуйте архив с ней в удобную папку</li>
-</ol>
-
-<details class="spoiler"><summary class="spoiler-title">Добавление dbibackend в контекстное меню вашей ОС (опционально)</summary><div class="spoiler-body">
-<p class="notice--info">Делается для удобства отправки выбранных для установки игр на консоль ик контекстного меню Windows</p>
-
-<ol>
-  <li>Нажмите <code class="highlighter-rouge">Win+R</code> и в появившемся окне наберите <code class="highlighter-rouge">shell:sendto</code></li>
-  <li>Поместите в эту папку ярлык программы <a href="files/dbibackend_win.zip" target="_blank">dbibackend</a>
+  <li>Скачайте и установите <a href="files/dbibackend-setup.0.4.exe" target="_blank">dbibackend installer</a> в удобную для вас папку
     <ul>
-      <li>Вы можете перетащить <a href="files/dbibackend.zip" target="_blank">dbibackend</a> в эту папку правой кнопкой мыши и выбрать “<strong>Создать ярлыки</strong>” в появившемся контекстном меню</li>
-      <li>Вы можете нажать правую кнопку мыши на пустом месте в папке и выбрать “<strong>Создать</strong>” -&gt; “<strong>Ярлык</strong>”, после чего следуйте указаниям мастера</li>
-      <li>Помните, что если вы переместите <code class="highlighter-rouge">dbibackend.exe</code> в другое место, то ярлык перестанет работать и его придётся создавать заново</li>
+      <li>Установщик ассоциирует dbibackend с файлами <code class="highlighter-rouge">.nsz</code>, <code class="highlighter-rouge">.nsp</code>, <code class="highlighter-rouge">.xci</code></li>
+      <li>Установщик добавит dbibackend в меню “Отправить” в Windows</li>
     </ul>
   </li>
 </ol>
-
-</div></details>
 
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Установка игр</summary><div class="spoiler-body">
-<p class="notice--warning">Если вы добавили dbibackend в контекстное меню своего ПК, то можете просто выделить файлы, которые хотите установить и в контекстном меню выбрать “<strong>Отправить</strong>” -&gt; “<strong>dbibackend.exe</strong>”, если у вас Windows или “<strong>Send</strong>” -&gt; “<strong>toSwitch</strong>”, если у вас Linux, вместо выполнения первых трёх пунктов.</p>
-
 <ol>
-  <li><strong>На ПК</strong> запустите программу <code class="highlighter-rouge">dbibackend</code></li>
-  <li>Нажмите “<strong>Add files</strong>” и выберите необходимые для установки <code class="highlighter-rouge">.nsp</code>, <code class="highlighter-rouge">.nsz</code> или <code class="highlighter-rouge">.xci</code>
+  <li>Выделите файлы, которые собираетесь установить</li>
+  <li>В контекстном меню (вызывается по нажатию праой кнопки мыши на выделенных файлах) выберите “<strong>Отправить</strong>” -&gt; “<strong>dbibackend</strong>”
     <ul>
-      <li>Для выбора нескольких игр, удерживайте клавишу (Ctrl)</li>
-      <li>Для выбора всей папки с играми, выберите “<strong>Add folder</strong>”</li>
+      <li>Если вам нужно установить всего один файл, просто нажмите на него дважды левой кнопкой мыши</li>
     </ul>
   </li>
-  <li>Нажмите “<strong>Start Server</strong>”</li>
-  <li>Подключите консоль к ПК</li>
   <li><strong>На приставке</strong> запустите <strong>DBI</strong> через <a href="hbl" target="_blank">Homebrew Launcher</a></li>
   <li>Выберите пункт “<strong>Install title from USB</strong>”
     <ul>
