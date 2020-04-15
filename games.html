@@ -355,8 +355,6 @@
 
 <hr />
 
-<div class="notice--danger"><strong>Вышла новая версия системного ПО! Если у вас не стоит incognito, отключите WiFi, чтобы случайно не обновить прошивку!</strong></div>
-
 <div class="notice--warning">Если вы попали в это руководство впервые и не знаете как прошивается Switch, рекомендуем начать знакомство с ним с <a href="/" target="_blank">первой страницы</a></div>
 
 <div class="notice">Если вам помогло или просто понравилось это руководство, то мы принимаем <a href="http://customfw.xyz/donations" target="_blank">пожертвования</a>.<br />По вопросам, касающимся взлома и руководства, обращайтесь <a href="http://customfw.xyz/contacts" target="_blank">сюда</a></div>
@@ -467,7 +465,10 @@
 <h3 id="установка-игр">Установка игр</h3>
 
 <details class="spoiler"><summary class="spoiler-title">Windows</summary><div class="spoiler-body">
-<details class="spoiler"><summary class="spoiler-title">Windows - Подготовительные работы (выполняются едино-разово)</summary><div class="spoiler-body">
+<p>Простой способ подойдёт большинству пользователей, которые устанавливают по одной-двум играм за раз. Хоть этот способ и проще, он всё-таки менее стабильный и надёжный. В ряде случаев, при использовании простого способа, у вас могут случаться ошибки и зависания tinfoil, через который установка и будет происходить. Поэтому рекомендуется ставить игры через простой способ исключительно по одной!</p>
+
+<details class="spoiler"><summary class="spoiler-title">Удобный способ (через DBI, рекомендуется)</summary><div class="spoiler-body">
+<details class="spoiler"><summary class="spoiler-title">Подготовительные работы (выполняются едино-разово)</summary><div class="spoiler-body">
 <p class="notice--warning">Необходимо сделать только раз для корректной работы установки по USB</p>
 
 <p class="notice--warning">Эти драйвера отличаются от тех, что используются для передачи пейлоада на switch! Если вы ни разу не устанавливали игры этим методом, ставить драйвера нужно обязательно!</p>
@@ -537,6 +538,63 @@
 
 </div></details>
 
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Простой способ (через tinfoil)</summary><div class="spoiler-body">
+<details class="spoiler"><summary class="spoiler-title">Подготовительные работы (выполняются едино-разово)</summary><div class="spoiler-body">
+<ol>
+  <li>На консоли должен быть доступ к интернет! Так же убедитесь, что на приставке стоит корректная текущая дата и время
+    <ul>
+      <li>Если это не так, синхронизируйте часы с интернет-временем через приложение “<strong>nx-ntpc</strong>” в <a href="hbl" target="_blank">Homebrew Launcher</a></li>
+    </ul>
+  </li>
+  <li>Удалите “<strong>tinfoil</strong>” из главного меню приставки</li>
+  <li>Запустите <strong>tinfoil installer</strong> через <a href="hbl" target="_blank">Homebrew Launcher</a></li>
+  <li>Прожмите <strong>ОК</strong> во всех всплывающих окнах</li>
+  <li>Перейдите в “<strong>Очередь</strong>” и проверьте есть ли там “<strong>tinfoil[050000BADDAD0000]</strong>”, дождитесь окончания его загрузки
+    <ul>
+      <li>Если “<strong>tinfoil[050000BADDAD0000]</strong>” там нет, то проверьте время на приставке и что на приставке есть интернет</li>
+    </ul>
+  </li>
+  <li>Перезапустите <strong>tinfoil</strong></li>
+</ol>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Установка игр</summary><div class="spoiler-body">
+<ol>
+  <li>Запустите <strong>tinfoil</strong> из главного меню
+    <ul>
+      <li>К вашему ПК примонтируется новое MTP-устройство</li>
+    </ul>
+  </li>
+  <li>Откройте появившееся устройство “<strong>Switch</strong>”</li>
+  <li>Перейдите в папку “<strong>switch</strong>” -&gt; “<strong>Установка</strong>”</li>
+  <li>Перетяните и скопируйте игры, которые хотите установить в папку “<strong>Установка</strong>”
+    <ul>
+      <li>Этот способ устанавливает игры только на карту памяти!</li>
+      <li>Не забывайте, что игры в формате NSZ после установки занимают больше места, чем весят сам NSZ-файл</li>
+      <li>Рекомендуется производить установку игр по одной, во избежании проблем и ошибок!</li>
+    </ul>
+  </li>
+  <li>Перейдите в “<strong>Консоль</strong>” на экране приставки и обратите внимание на то, что там написано
+    <ul>
+      <li>“<strong>disabling sleep</strong>” - во время остановки экран приставки не будет выключаться автоматически</li>
+      <li>“<strong>blocking home button</strong>” - блокировка кнопки (HOME), чтобы пользователь не мог прервать установку</li>
+      <li>“<strong>beginning stream install</strong>” - передача игры началась</li>
+      <li>“<strong>bypass firmware check</strong>” - проверка соответствия версии системного ПО отключена</li>
+      <li>“<strong>installing record %TITLEID%</strong>” - добавление записи об игры в базу данных свитча</li>
+      <li>“<strong>successfully commited metadatabase!</strong>” - игра успешно добавлена</li>
+      <li>“<strong>enabling sleep</strong>” - включение автоматического отключения экрана</li>
+      <li>“<strong>unblocking home button</strong>” - разблокировка кнопки (HOME)</li>
+    </ul>
+  </li>
+  <li>Только после того, как вы увидите “<strong>unblocking home button</strong>” в логе установки, можно закрывать tinfoil!</li>
+</ol>
+
+</div></details>
+
+</div></details>
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Linux и MacOS</summary><div class="spoiler-body">
