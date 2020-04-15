@@ -335,7 +335,7 @@
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#kefir-419" id="markdown-toc-kefir-419">KEFIR 419</a>    <ul>
+  <li><a href="#kefir-420" id="markdown-toc-kefir-420">KEFIR 420</a>    <ul>
       <li><a href="#внимание" id="markdown-toc-внимание"><strong>ВНИМАНИЕ!</strong></a></li>
       <li><a href="#состав-kefir" id="markdown-toc-состав-kefir">Состав kefir</a></li>
       <li><a href="#changelog" id="markdown-toc-changelog">Changelog</a></li>
@@ -359,7 +359,7 @@
 
 <hr />
 
-<h2 id="kefir-419">KEFIR 419</h2>
+<h2 id="kefir-420">KEFIR 420</h2>
 
 <!--В данный момент всем, у кого прошивка 9.0.1 или ниже рекомендуется использовать [последний релизный кефир](https://github.com/rashevskyv/switch/releases/tag/332){:target="_blank"}. [Кефир 400](https://github.com/rashevskyv/switch/releases){:target="_blank"} предназначен в первую очередь для тех, кто установил себе 9.1.0! Покуда версия пре-релизная, её можно установить только вручную!-->
 
@@ -388,13 +388,12 @@
       <li><a href="https://github.com/rashevskyv/kefir-updater/releases" target="_blank">Kefir Updater</a> - программа для обновления kefir через интернет</li>
       <li><a href="https://github.com/joel16/NX-Shell/releases/latest" target="_blank">NX-Shell</a> - файловый менеджер</li>
       <li><a href="https://github.com/devgru/FreshHay/releases" target="_blank">FreshHay</a> - программа для скачивания и распаковки рекомендуемой версии системного ПО прямо на приставке</li>
-      <li><a href="https://github.com/FlagBrew/Checkpoint/releases/latest" target="_blank">Checkpoint</a> - программа для <a href="checkpoint" target="_blank">резервного копирования и восстановления сейвов</a></li>
+      <li><a href="https://github.com/J-D-K/JKSV/releases" target="_blank">JKSV</a> - программа для <a href="backup_saves" target="_blank">резервного копирования и восстановления сейвов</a></li>
       <li><a href="https://github.com/shchmue/Lockpick_RCM/releases/latest" target="_blank">Lockpick_RCM</a> - программа для <a href="backup-nand#часть-iii---дампим-ключи" target="_blank">дампа ключей приставки</a></li>
       <li><a href="https://github.com/jimzrt/Incognito_RCM/releases" target="_blank">Incognoto_RCM</a> - программа, стирающая серийный номер приставки, чтобы <a href="https://switch.customfw.xyz/block-update" target="_blank">заблокировать обновления и спрятать консоль от Nintendo</a></li>
       <li><a href="https://github.com/Cpasjuste/pplay/releases/latest" target="_blank">pplay</a> - видеоплеер</li>
       <li><a href="https://discord.gg/qxdYtrJ" target="_blank">/hbg/shop 8.1.0</a> - программа, позволяющая <a href="tinfoil" target="_blank">качать игры</a> для приставки прямо из сети</li>
       <li><a href="https://switchtools.sshnuke.net/" target="_blank">ChoiDujourNX </a> - программа для <a href="update-to-latest" target="_blank">безопасного обновления</a> версии системного ПО приставки</li>
-      <li><a href="https://github.com/liuervehc/nxmtp/releases/latest" target="_blank">nxmtp</a> - программа, монтирующая карту памяти Switch в виде MTP-устройства. Подключите приставку к ПК кабелем и запустите программу</li>
       <li><a href="https://github.com/exelix11/SwitchThemeInjector/releases/latest" target="_blank">NXThemes Installer</a> - менеджер кастомных тем</li>
       <li>DBI - программа для <a href="games" target="_blank">установки игр</a> по USB или с карты памяти</li>
       <li><a href="https://sx.xecuter.com/" target="_blank">SXInstaller</a> (SXOS only) - аналог tinfoil для SXOS</li>
@@ -418,10 +417,9 @@
 а затем запустите через альбомы!</p>
 
 <ul>
-  <li>[Обновлено] hekate 5.1.3</li>
-  <li>[Обновлено] Tesla Overlay Menu 1.3</li>
-  <li>[Обновлено] DBI v95</li>
-  <li>[Замена] Checkpoint удалён и заменён JKSV</li>
+  <li>[Обновлено] Atmosphere 0.11.0p</li>
+  <li>[Обновлено] DBI v101</li>
+  <li>[Обновлено] JKSV 04.10.2020p</li>
 </ul>
 
 <hr />
@@ -448,10 +446,21 @@
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Инструкция по установке вручную (все ОС)</summary><div class="spoiler-body">
+<h3 id="вы-можете-получить-доступ-к-карте-памяти-двумя-способами">Вы можете получить доступ к карте памяти двумя способами:</h3>
+
+<ol>
+  <li>Достав карту памяти из приставки и вставив её в ПК</li>
+  <li>Перезагрузите приставку через меню, вызываемое удерживанием кнопки (POWER)</li>
+  <li>На сплеш-скрине кефира нажмите кнопку понижения громкости, чтобы попасть в hekate</li>
+  <li>Находясь в hekate вы модете достать карту памяти и вставить её в ПК</li>
+  <li>С помощью DBI</li>
+  <li></li>
+</ol>
+
 <h3 id="удаление-файлов-старых-прошивок">Удаление файлов старых прошивок</h3>
 
 <ol>
-  <li>Если вы использовали пользовательские модификации, читы или переводы, переместите папку ‘titles’ из папки <code class="highlighter-rouge">sxos</code> или <code class="highlighter-rouge">ReiNX</code> или <code class="highlighter-rouge">atmosphere</code> (название папки зависит от вашей прошивки) в корень карты памяти. Если не использовали, пропустите эту часть</li>
+  <li>Если вы использовали пользовательские модификации, читы или переводы, переместите папку <code class="highlighter-rouge">titles</code> из папки <code class="highlighter-rouge">sxos</code> или <code class="highlighter-rouge">ReiNX</code> или <code class="highlighter-rouge">atmosphere</code> (название папки зависит от вашей прошивки) в корень карты памяти. Если не использовали, пропустите эту часть</li>
   <li>Удалите из папки ‘titles’ папки со следующими названиями (если они там есть):
     <ul>
       <li><code class="highlighter-rouge">010000000000100D</code></li>
@@ -465,7 +474,7 @@
       <li><code class="highlighter-rouge">4200000000000010</code></li>
     </ul>
   </li>
-  <li>Удалите из корня вашей карты памяти все папки, кроме папки <code class="highlighter-rouge">titles</code>, <code class="highlighter-rouge">emuMMC</code> и <code class="highlighter-rouge">Nintendo</code>, если таковые там есть</li>
+  <li>Удалите из корня вашей карты памяти все папки, кроме папок <code class="highlighter-rouge">titles</code>, <code class="highlighter-rouge">sxos</code>, <code class="highlighter-rouge">emuMMC</code> и <code class="highlighter-rouge">Nintendo</code>, если таковые там есть</li>
 </ol>
 
 <h3 id="для-установки-atmosphere">Для установки Atmosphere</h3>
