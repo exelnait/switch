@@ -335,7 +335,7 @@
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#kefir-424" id="markdown-toc-kefir-424">KEFIR 424</a>    <ul>
+  <li><a href="#kefir-425" id="markdown-toc-kefir-425">KEFIR 425</a>    <ul>
       <li><a href="#внимание" id="markdown-toc-внимание"><strong>ВНИМАНИЕ!</strong></a></li>
       <li><a href="#состав-kefir" id="markdown-toc-состав-kefir">Состав kefir</a></li>
       <li><a href="#changelog" id="markdown-toc-changelog">Changelog</a></li>
@@ -357,7 +357,7 @@
 
 <hr />
 
-<h2 id="kefir-424">KEFIR 424</h2>
+<h2 id="kefir-425">KEFIR 425</h2>
 
 <!--В данный момент всем, у кого прошивка 9.0.1 или ниже рекомендуется использовать [последний релизный кефир](https://github.com/rashevskyv/switch/releases/tag/332){:target="_blank"}. [Кефир 400](https://github.com/rashevskyv/switch/releases){:target="_blank"} предназначен в первую очередь для тех, кто установил себе 9.1.0! Покуда версия пре-релизная, её можно установить только вручную!-->
 
@@ -378,10 +378,15 @@
 <h3 id="состав-kefir">Состав kefir</h3>
 
 <ul>
-  <li>Atmosphere или SXOS</li>
-  <li>Поддерживает запуск через <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или <a href="caffeine" target="_blank">Caffeine</a></li>
-  <li><a href="https://github.com/CTCaer/hekate/releases/latest" target="_blank">hekate</a> и <a href="https://github.com/Joonie86/hekate/releases/latest" target="_blank">ACID-патчи для неё</a></li>
-  <li>Homebrew
+  <li>Кастомная прошивка на выбор:
+    <ul>
+      <li><a href="https://github.com/borntohonk/NEUTOS/releases" target="_blank">NEUTOS</a> - специальный форк Atmosphere OS, заточенный для работы с tinfoil и для беспроблемного запуска пиратских игр с приставки</li>
+      <li><a href="https://sx.xecuter.com" target="_blank">SXOS</a></li>
+    </ul>
+  </li>
+  <li>Загрузчик <a href="https://github.com/CTCaer/hekate/releases/latest" target="_blank">hekate</a> поддерживает запуск через <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или <a href="caffeine" target="_blank">Caffeine</a></li>
+  <li><a href="https://github.com/CTCaer/hekate/releases/latest" target="_blank">hekate</a></li>
+  <li>Установленное Homebrew
     <ul>
       <li><a href="https://github.com/rashevskyv/kefir-updater/releases" target="_blank">Kefir Updater</a> - программа для обновления kefir через интернет</li>
       <li><a href="https://github.com/joel16/NX-Shell/releases/latest" target="_blank">NX-Shell</a> - файловый менеджер</li>
@@ -418,11 +423,12 @@
 \atmosphere\contents\010000000007E51A ДО начала обновления кефира!</p>
 
 <ul>
-  <li>[Обновлено] Atmosphere 0.11.1</li>
+  <li>[Заменено] Atmo на NEUTOS 0.11.1 - форк атмы с поддержкой tinfoil</li>
   <li>[Обновлено] hekate 5.1.4</li>
   <li>[Обновлено] Добавлены сигпатчи для 10.0.0</li>
   <li>[Обновлено] DBI v101</li>
   <li>[Обновлено] JKSV 04.10.2020p</li>
+  <li>[Обновлено] NXThemesInstaller 2.3</li>
   <li>[Обновлено] Lockpick_RCM 1.8.2</li>
   <li>[Обновлено] Incognito_RCM 0.6.2</li>
   <li>[Обновлено] Tesla Overlay 1.4.0</li>
