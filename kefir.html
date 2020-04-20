@@ -335,7 +335,7 @@
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#kefir-428" id="markdown-toc-kefir-428">KEFIR 428</a>    <ul>
+  <li><a href="#kefir-430" id="markdown-toc-kefir-430">KEFIR 430</a>    <ul>
       <li><a href="#внимание" id="markdown-toc-внимание"><strong>ВНИМАНИЕ!</strong></a></li>
       <li><a href="#состав-kefir" id="markdown-toc-состав-kefir">Состав kefir</a></li>
       <li><a href="#changelog" id="markdown-toc-changelog">Changelog</a></li>
@@ -357,7 +357,7 @@
 
 <hr />
 
-<h2 id="kefir-428">KEFIR 428</h2>
+<h2 id="kefir-430">KEFIR 430</h2>
 
 <!--В данный момент всем, у кого прошивка 9.0.1 или ниже рекомендуется использовать [последний релизный кефир](https://github.com/rashevskyv/switch/releases/tag/332){:target="_blank"}. [Кефир 400](https://github.com/rashevskyv/switch/releases){:target="_blank"} предназначен в первую очередь для тех, кто установил себе 9.1.0! Покуда версия пре-релизная, её можно установить только вручную!-->
 
@@ -395,7 +395,7 @@
       <li><a href="https://github.com/shchmue/Lockpick_RCM/releases/latest" target="_blank">Lockpick_RCM</a> - программа для <a href="backup-nand#часть-iii---дампим-ключи" target="_blank">дампа ключей приставки</a></li>
       <li><a href="https://github.com/borntohonk/Incognito_RCM/releases/" target="_blank">Incognoto_RCM</a> - программа, стирающая серийный номер приставки, чтобы <a href="https://switch.customfw.xyz/block-update" target="_blank">заблокировать обновления и спрятать консоль от Nintendo</a></li>
       <li><a href="https://github.com/Cpasjuste/pplay/releases/latest" target="_blank">pplay</a> - видеоплеер</li>
-      <li><a href="https://discord.gg/qxdYtrJ" target="_blank">/hbg/shop 8.1.0</a> - программа, позволяющая <a href="tinfoil" target="_blank">качать игры</a> для приставки прямо из сети</li>
+      <li><a href="https://discord.gg/X3Q9tM" target="_blank">/hbg/shop 8.1.0</a> - программа, позволяющая <a href="tinfoil" target="_blank">качать игры</a> для приставки прямо из сети</li>
       <li><a href="https://switchtools.sshnuke.net/" target="_blank">ChoiDujourNX </a> - программа для <a href="update-to-latest" target="_blank">безопасного обновления</a> версии системного ПО приставки</li>
       <li><a href="https://github.com/exelix11/SwitchThemeInjector/releases/latest" target="_blank">NXThemes Installer</a> - менеджер кастомных тем</li>
       <li>DBI - программа для <a href="games" target="_blank">установки игр</a> по USB или с карты памяти</li>
@@ -423,14 +423,11 @@
 \atmosphere\contents\010000000007E51A ДО начала обновления кефира!</p>
 
 <ul>
-  <li>[Исправлено] Исправлен баг из-за которого не работал сиснанд</li>
-  <li>[Заменено] Atmosphere снова вернулась, tinfoil работает</li>
-  <li>[Обновлено] hekate 5.1.4</li>
-  <li>[Обновлено] DBI v101</li>
-  <li>[Обновлено] JKSV 04.10.2020p</li>
-  <li>[Обновлено] NXThemesInstaller 2.3</li>
-  <li>[Обновлено] Lockpick_RCM 1.8.2</li>
-  <li>[Обновлено] Incognito_RCM 0.6.2</li>
+  <li>[Заменено] EmuNAND или SysNAND для пиратки запускается через NEUTOS - 
+  форк Atmosphere, без которого не работает tinfoil. SysNAND для 
+  лицензии запускается на ванильной атмосфере. Для тех, кому не нужен
+  tinfoil и нет желание использовать NEUTOS есть соответствующая настройка 
+  в опциях скрипта-установщика кефира. Для остальных NEUTOS идёт по-умолчанию.</li>
   <li>[Обновлено] Tesla Overlay 1.4.0</li>
   <li>[Обновлено] Overlay Menu 1.4.0</li>
 </ul>
