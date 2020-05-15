@@ -105,28 +105,8 @@
 <![endif]-->
 
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	  
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 300) {
-				$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-			});
-			  
-			$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 600);
-			return false;
-		});
-	  
-	});
-</script>
-
-<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </head>
 
   <body class="layout--single">
@@ -371,34 +351,37 @@
 <h2 id="установка-autorcm">Установка AutoRCM</h2>
 
 <ol>
-  <li>Войдите в <span class="tooltip">hekate
- <span class="bottom">
-     Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+  <li>Войдите в <span class="tooltip_container">
+ hekate
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+     </span>
  </span>
-</span> с помощью поддерживаемого на вашей приставке эксплойта:
-    <ul>
-      <li>Пропустите этот шаг, если вы уже в hekate</li>
-      <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
- <span class="bottom">
-  Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+</span> с помощью поддерживаемого на вашей приставке эксплойта, запуститив пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
  </span>
-</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a>
+</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или воспользовавшись <a href="caffeine" target="_blank">Caffeine</a>.
+    <ol>
+      <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate
         <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
+          <li>Пропустите этот шаг, если вы уже в hekate</li>
         </ul>
       </li>
-      <li>Воспользуйтесь <a href="caffeine" target="_blank">Caffeine</a> для загрузки hekate
-        <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
-        </ul>
-      </li>
-    </ul>
+    </ol>
   </li>
   <li>Перейдите в раздел “<strong>Tools</strong>” -&gt; “<strong>Archive bit - AutoRCM</strong>” (внизу экрана) и установите “<strong>AutoRCM</strong>” в положение “<strong>ON</strong>”</li>
   <li>Нажмите “<strong>Home</strong>” вверху экрана</li>
-  <li><a href="cfw">Запустите <span class="tooltip">кастомную прошивку
- <span class="bottom">
-     Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+  <li><a href="cfw">Запустите <span class="tooltip_container">
+ кастомную прошивку
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+     </span>
  </span>
 </span></a></li>
 </ol>
@@ -411,34 +394,37 @@
 <p>Не рекомендуется удалять AutoRCM, если вы делали <a href="update-to-latest" target="_blank">безопасное обновление системы</a> - <a href="update-to-latest#%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D1%87%D0%B0%D1%81%D1%82%D1%8C" target="_blank">сожжёте предохранители</a></p>
 
 <ol>
-  <li>Войдите в <span class="tooltip">hekate
- <span class="bottom">
-     Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+  <li>Войдите в <span class="tooltip_container">
+ hekate
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+     </span>
  </span>
-</span> с помощью поддерживаемого на вашей приставке эксплойта:
-    <ul>
-      <li>Пропустите этот шаг, если вы уже в hekate</li>
-      <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
- <span class="bottom">
-  Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+</span> с помощью поддерживаемого на вашей приставке эксплойта, запуститив пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
  </span>
-</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a>
+</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или воспользовавшись <a href="caffeine" target="_blank">Caffeine</a>.
+    <ol>
+      <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate
         <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
+          <li>Пропустите этот шаг, если вы уже в hekate</li>
         </ul>
       </li>
-      <li>Воспользуйтесь <a href="caffeine" target="_blank">Caffeine</a> для загрузки hekate
-        <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
-        </ul>
-      </li>
-    </ul>
+    </ol>
   </li>
   <li>Перейдите в раздел “<strong>Tools</strong>” -&gt; “<strong>Archive bit - AutoRCM</strong>” (внизу экрана) и установите “<strong>AutoRCM</strong>” в положение “<strong>OFF</strong>”</li>
   <li>Нажмите “<strong>Home</strong>” вверху экрана</li>
-  <li><a href="cfw">Запустите <span class="tooltip">кастомную прошивку
- <span class="bottom">
-     Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+  <li><a href="cfw">Запустите <span class="tooltip_container">
+ кастомную прошивку
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+     </span>
  </span>
 </span></a></li>
 </ol>
@@ -474,7 +460,56 @@
 
     <div class="page__footer-container">
       <footer class="page__footer">
-        
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
         <div class="page__footer-follow">
   <ul class="social-icons">
     

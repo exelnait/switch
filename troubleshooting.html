@@ -105,28 +105,8 @@
 <![endif]-->
 
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	  
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 300) {
-				$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-			});
-			  
-			$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 600);
-			return false;
-		});
-	  
-	});
-</script>
-
-<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </head>
 
   <body class="layout--single">
@@ -335,9 +315,12 @@
 <details class="spoiler"><summary class="spoiler-title">После проброса плейлоада и появления сплешскринов, консоль висит в черном экране.</summary><div class="spoiler-body">
 <p><strong>О:</strong> Вам нужно установить драйвер exFAT. Для этого проделайте <a href="update-to-latest" target="_blank">безопасное обновление прошивки</a>. Его нужно делать даже в том случае, если у вас и так стоит последняя версия взламываемой прошивки! Повторное обновление просто установит отсутствующий драйвер.</p>
 
-<p>Если не помогает, переустановите <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
-	<span class="bottom">
-		Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+<p>Если не помогает, переустановите <span class="tooltip_container">
+	<a href="kefir" target="_blank">kefir</a>
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+		</span>
 	</span>
 </span> начисто. Для этого удалите с карты памяти всё, кроме папки Nintendo и emummc (или sxos/emunand) и ставьте кефир заново</p>
 
@@ -348,9 +331,12 @@
 
 <p><strong>О:</strong> Вам нужно установить драйвер exFAT. Для этого проделайте <a href="update-to-latest" target="_blank">безопасное обновление прошивки</a>. Его нужно делать даже в том случае, если у вас и так стоит последняя версия взламываемой прошивки! Повторное обновление просто установит отсутствующий драйвер.</p>
 
-<p>Если не помогает, переустановите <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
-	<span class="bottom">
-		Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+<p>Если не помогает, переустановите <span class="tooltip_container">
+	<a href="kefir" target="_blank">kefir</a>
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+		</span>
 	</span>
 </span> начисто. Для этого удалите с карты памяти всё, кроме папки Nintendo и emummc (или sxos/emunand) и ставьте кефир заново</p>
 
@@ -375,7 +361,7 @@
 
 </div></details>
 
-<details class="spoiler"><summary class="spoiler-title">Постоянные ошибки, игры вылетают</summary><div class="spoiler-body">
+<details class="spoiler"><summary class="spoiler-title">Постоянные ошибки, игры, во время работы, вылетают</summary><div class="spoiler-body">
 <p><strong>О:</strong> Проверьте свою SD-карту на ошибки с помощью <a href="http://customfw.xyz/h2testw-windows" target="_blank">H2testw (Windows)</a>, <a href="http://customfw.xyz/f3-linux" target="_blank">F3 (Linux)</a>, или <a href="http://customfw.xyz/f3x-mac" target="_blank">F3X (Mac)</a>! Если карта в порядке, скопируйте папку Nintendo из корня карты памяти на ваш ПК, <a href="https://customfw.xyz/format_sd" target="_blank">отформатируйте её</a>, а затем установите кефир через скрипт.</p>
 
 </div></details>
@@ -391,8 +377,16 @@
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">На MacOS скинул файлы на карту памяти, но DBI \ tinfoil \ GoldLeaf их не видит</summary><div class="spoiler-body">
-<p><strong>О:</strong> Нужно исправить атрибуты.
-Запустите hekate и перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Archive bit - AutoRCM</strong> (в нижней части экрана), выберите <strong>Unset archive bit</strong></p>
+<p><strong>О:</strong> Нужно исправить атрибуты.</p>
+<ol>
+  <li>В <strong>hekate</strong> перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Arch bit • RCM • Touch • Partitions</strong> (в нижней части экрана), выберите <strong>Fix Archive Bit</strong>
+    <ul>
+      <li>Чтобы попасть в hekate, если вы находитесь не в ней, перезагрузите приставку, для этого удерживайте 5 секунд кнопку питания, находясь в кастомной прошивке, затем выберите <strong>Параметры электропитания</strong> -&gt; <strong>Перезагрузка</strong>. Когда появится сплешскин кефира, нажмите (VOL-) (кнопка понижения громкости)</li>
+    </ul>
+  </li>
+  <li>После окончания фикса атрибутов, нажмите <strong>Close</strong> в верхнем правом углу</li>
+  <li>Выберите <strong>Home</strong> -&gt; <strong>Launch</strong> - &gt;<strong>YOUR_OS_NAME</strong>, чтобы загрузиться обратно в прошивку</li>
+</ol>
 
 </div></details>
 
@@ -445,20 +439,42 @@
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">При запуске прошивки получаю ошибку "Fatal Error: [NXBOOT]"</summary><div class="spoiler-body">
-<p><strong>О:</strong> Обновите <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
-	<span class="bottom">
-		Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+<p><strong>О:</strong> Обновите <span class="tooltip_container">
+	<a href="kefir" target="_blank">kefir</a>
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+		</span>
 	</span>
 </span></p>
 </div></details>
 
-<details class="spoiler"><summary class="spoiler-title">Проблемы после копирования файлов на карту на маке / В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть</summary><div class="spoiler-body">
-<p><strong>О:</strong> Запустите hekate и перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Archive bit - AutoRCM</strong> (в нижней части экрана), выберите <strong>Unset archive bit</strong></p>
-
-<p class="notice--warning">Не меняйте атрибуты папки Nintendo!</p>
+<details class="spoiler"><summary class="spoiler-title">Проблемы после копирования файлов на карту на маке/В Homebrew Menu/Tinfoil пусто, хотя на карте всё есть</summary><div class="spoiler-body">
+<p><strong>О:</strong></p>
+<ol>
+  <li>В <strong>hekate</strong> перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Arch bit • RCM • Touch • Partitions</strong> (в нижней части экрана), выберите <strong>Fix Archive Bit</strong>
+    <ul>
+      <li>Чтобы попасть в hekate, если вы находитесь не в ней, перезагрузите приставку, для этого удерживайте 5 секунд кнопку питания, находясь в кастомной прошивке, затем выберите <strong>Параметры электропитания</strong> -&gt; <strong>Перезагрузка</strong>. Когда появится сплешскин кефира, нажмите (VOL-) (кнопка понижения громкости)</li>
+    </ul>
+  </li>
+  <li>После окончания фикса атрибутов, нажмите <strong>Close</strong> в верхнем правом углу</li>
+  <li>Выберите <strong>Home</strong> -&gt; <strong>Launch</strong> - &gt;<strong>YOUR_OS_NAME</strong>, чтобы загрузиться обратно в прошивку</li>
+</ol>
 
 <p>Если вы пользователь MacOS и вам не помог способ выше, выполните следующую команду: <code class="highlighter-rouge">sudo chflags -R arch /Volumes/&lt;name of SD card&gt;</code></p>
 
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Исправление архивных атрибутов</summary><div class="spoiler-body">
+<ol>
+  <li>В <strong>hekate</strong> перейдите в меню <strong>Tools</strong>, переключитесь на вкладку <strong>Arch bit • RCM • Touch • Partitions</strong> (в нижней части экрана), выберите <strong>Fix Archive Bit</strong>
+    <ul>
+      <li>Чтобы попасть в hekate, если вы находитесь не в ней, перезагрузите приставку, для этого удерживайте 5 секунд кнопку питания, находясь в кастомной прошивке, затем выберите <strong>Параметры электропитания</strong> -&gt; <strong>Перезагрузка</strong>. Когда появится сплешскин кефира, нажмите (VOL-) (кнопка понижения громкости)</li>
+    </ul>
+  </li>
+  <li>После окончания фикса атрибутов, нажмите <strong>Close</strong> в верхнем правом углу</li>
+  <li>Выберите <strong>Home</strong> -&gt; <strong>Launch</strong> - &gt;<strong>YOUR_OS_NAME</strong>, чтобы загрузиться обратно в прошивку</li>
+</ol>
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Возникают ошибки при установке NSP-файлов</summary><div class="spoiler-body">
@@ -467,6 +483,10 @@
 	* Если не помогло - перекачайте файлы, возможно они не докачаны. 
 	* На switch’е через hekate во вкладке <strong>tools</strong> выберите <strong>Unset archive bit</strong>.</p>
 </div></details>
+
+<hr />
+
+<p class="notice--success"><a href="javascript:window.close();">Закрыть страницу</a></p>
 
 				
         
@@ -495,7 +515,56 @@
 
     <div class="page__footer-container">
       <footer class="page__footer">
-        
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
         <div class="page__footer-follow">
   <ul class="social-icons">
     

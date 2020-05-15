@@ -105,28 +105,8 @@
 <![endif]-->
 
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	  
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 300) {
-				$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-			});
-			  
-			$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 600);
-			return false;
-		});
-	  
-	});
-</script>
-
-<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </head>
 
   <body class="layout--single">
@@ -377,9 +357,12 @@
   <li>Настроенная и работающая <a href="cfw" target="_blank">кастомная прошивка</a></li>
   <li>Умение <a href="fusee-gelee" target="_blank">запускать пейлоады через Fusée Gelée</a></li>
   <li>Свежая версия <a href="update-to-latest" target="_blank">прошивки приставки</a></li>
-  <li>Свежая версия <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
-  <span class="bottom">
-      Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+  <li>Свежая версия <span class="tooltip_container">
+  <a href="kefir" target="_blank">kefir</a>
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+      </span>
   </span>
 </span> и установленный <em>DBIv49</em> (выбирается в опциях скрипта-установщика kefir; в <code class="highlighter-rouge">atmo.zip</code> и <code class="highlighter-rouge">sxos.zip</code> находится по-умолчанию вместе с новыми версиями DBI)
     <ul>
@@ -512,7 +495,56 @@
 
     <div class="page__footer-container">
       <footer class="page__footer">
-        
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
         <div class="page__footer-follow">
   <ul class="social-icons">
     

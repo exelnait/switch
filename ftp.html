@@ -105,28 +105,8 @@
 <![endif]-->
 
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	  
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 300) {
-				$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-			});
-			  
-			$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 600);
-			return false;
-		});
-	  
-	});
-</script>
-
-<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </head>
 
   <body class="layout--single">
@@ -359,18 +339,24 @@
 
 <hr />
 
-<p>Эта программа нужна для того, чтобы закидывать в приставку файлы не вынимая карты памяти. Скорость закачки в таком случае будет сильно меньше, но не придется перезапускать консоль и, как следствие, <span class="tooltip">прошивку
-	<span class="bottom">
-		Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+<p>Эта программа нужна для того, чтобы закидывать в приставку файлы не вынимая карты памяти. Скорость закачки в таком случае будет сильно меньше, но не придется перезапускать консоль и, как следствие, <span class="tooltip_container">
+	прошивку
+	<span class="tooltip"><i class="fas fa-caret-down"></i>
+		<span class="bottom">
+			Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+		</span>
 	</span>
 </span></p>
 
 <h1 id="что-понадобится">Что понадобится</h1>
 
 <ul>
-  <li>Запущенная <a href="cfw" target="_blank"><span class="tooltip">CFW
-  <span class="bottom">
-      Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+  <li>Запущенная <a href="cfw" target="_blank"><span class="tooltip_container">
+  CFW
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+      </span>
   </span>
 </span></a></li>
   <li>Настроенный и работающий <a href="hbl" target="_blank">Homebrew Launcher</a></li>
@@ -384,9 +370,12 @@
 <ol>
   <li>Выключите Switch и вставьте его карту памяти в ПК</li>
   <li>Скопируйте <code class="highlighter-rouge">.nro</code>-файл ftpd в папку <code class="highlighter-rouge">switch</code> в корне карты памяти приставки</li>
-  <li>Вставьте карту памяти в приставку и запустите <a href="cfw" target="_blank"><span class="tooltip">CFW
- <span class="bottom">
-     Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+  <li>Вставьте карту памяти в приставку и запустите <a href="cfw" target="_blank"><span class="tooltip_container">
+ CFW
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
+     </span>
  </span>
 </span></a></li>
 </ol>
@@ -433,7 +422,56 @@
 
     <div class="page__footer-container">
       <footer class="page__footer">
-        
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
         <div class="page__footer-follow">
   <ul class="social-icons">
     

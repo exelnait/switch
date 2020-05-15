@@ -105,28 +105,8 @@
 <![endif]-->
 
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	  
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 300) {
-				$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-			});
-			  
-			$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 600);
-			return false;
-		});
-	  
-	});
-</script>
-
-<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </head>
 
   <body class="layout--single">
@@ -374,9 +354,12 @@
 <h2 id="что-понадобится">Что понадобится</h2>
 
 <ul>
-  <li>Свежая версия <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
-  <span class="bottom">
-      Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+  <li>Свежая версия <span class="tooltip_container">
+  <a href="kefir" target="_blank">kefir</a>
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+      </span>
   </span>
 </span></li>
   <li>Свежая версия <a href="https://github.com/spacemeowx2/ldn_mitm/releases/latest" target="_blank">ldn_mitm</a> (ldn_mitm_vx.x.x.zip)
@@ -415,9 +398,12 @@
 <h3 id="часть-ii---настраиваем-switch">Часть II - Настраиваем Switch</h3>
 
 <ol>
-  <li>Обновите <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
- <span class="bottom">
-     Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+  <li>Обновите <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
  </span>
 </span> по инструкции из репозитория, если не делали этого ранее</li>
   <li>Включите приставку и перейдите в “<strong>Системные настройки</strong>” -&gt; “<strong>Интернет</strong>” -&gt; “<strong>Интернет-настройки</strong>”</li>
@@ -429,7 +415,7 @@
   <li>Выберите “<strong>Настройки DNS</strong>” -&gt; “<strong>Ручной ввод</strong>”</li>
   <li>В поле “<strong>Первичный DNS</strong>” введите <code class="highlighter-rouge">163.172.141.219</code></li>
   <li>В поле “<strong>Вторичный DNS</strong>” введите <code class="highlighter-rouge">45.248.48.62</code> и нажмите “<strong>Сохранить</strong>”, а затем OK</li>
-  <li>Если вы используете <a href="" target="_blank">SX OS</a>, откройте меню SXOS (альбомы) и во вкладке “<strong>Options</strong>” активируйте “<strong>Internet Local Wireless Play</strong>”
+  <li>Если вы используете <a href="cfw#sx-os" target="_blank">SX OS</a>, откройте меню SX OS (альбомы) и во вкладке “<strong>Options</strong>” активируйте “<strong>Internet Local Wireless Play</strong>”
     <ul>
       <li>Необходимо активировать заново после каждой перезагрузки приставки</li>
     </ul>
@@ -508,7 +494,56 @@
 
     <div class="page__footer-container">
       <footer class="page__footer">
-        
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
         <div class="page__footer-follow">
   <ul class="social-icons">
     

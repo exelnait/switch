@@ -105,28 +105,8 @@
 <![endif]-->
 
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	  
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 300) {
-				$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-			});
-			  
-			$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 600);
-			return false;
-		});
-	  
-	});
-</script>
-
-<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </head>
 
   <body class="layout--single">
@@ -345,7 +325,7 @@
   </li>
   <li><a href="#установка-и-запуск-игр-в-формате-xci" id="markdown-toc-установка-и-запуск-игр-в-формате-xci">Установка и запуск игр в формате XCI</a></li>
   <li><a href="#установка-приложений-в-формате-nsp" id="markdown-toc-установка-приложений-в-формате-nsp">Установка приложений в формате NSP</a></li>
-  <li><a href="#использование-usb-носителя-в-sxos" id="markdown-toc-использование-usb-носителя-в-sxos">Использование USB-носителя в SXOS</a></li>
+  <li><a href="#использование-usb-носителя-в-sx-os" id="markdown-toc-использование-usb-носителя-в-sx-os">Использование USB-носителя в SX OS</a></li>
 </ul>
 
   </nav>
@@ -402,7 +382,7 @@
 <ol>
   <li>Выключите консоль</li>
   <li>Вставьте карту памяти в ПК</li>
-  <li>Создайте в корне карты памяти приставки папку <code class="highlighter-rouge">sxos</code> и в ней папку <code class="highlighter-rouge">games</code></li>
+  <li>Создайте в корне карты памяти приставки папку <code class="highlighter-rouge">SX OS</code> и в ней папку <code class="highlighter-rouge">games</code></li>
   <li>Скопируйте игру в формате <code class="highlighter-rouge">.xci</code> в папку <code class="highlighter-rouge">sxos/games</code></li>
   <li><a href="cfw#sx-os" target="_blank">Запустите SX OS</a></li>
   <li>Запустите “<strong>Альбомы</strong>”, чтобы попасть в меню выбора игр</li>
@@ -417,7 +397,7 @@
 <ol>
   <li>Выключите консоль</li>
   <li>Вставьте карту памяти в ПК</li>
-  <li>Создайте в корне карты памяти приставки папку <code class="highlighter-rouge">sxos</code> и в ней папку <code class="highlighter-rouge">games</code></li>
+  <li>Создайте в корне карты памяти приставки папку <code class="highlighter-rouge">SX OS</code> и в ней папку <code class="highlighter-rouge">games</code></li>
   <li>Скопируйте игру в формате <code class="highlighter-rouge">.nsp</code> в папку <code class="highlighter-rouge">sxos/games</code></li>
   <li><a href="cfw#sx-os" target="_blank">Запустите SX OS</a></li>
   <li>Запустите “<strong>Альбомы</strong>”, чтобы попасть в меню выбора игр</li>
@@ -446,9 +426,9 @@
   </li>
 </ol>
 
-<h1 id="использование-usb-носителя-в-sxos">Использование USB-носителя в SXOS</h1>
+<h1 id="использование-usb-носителя-в-sx-os">Использование USB-носителя в SX OS</h1>
 
-<p>SXOS поддерживает установку и монтирование игр с внешнего USB-носителя.</p>
+<p>SX OS поддерживает установку и монтирование игр с внешнего USB-носителя.</p>
 
 <ol>
   <li>Отформатируйте ваш USB-носитель в exFat</li>
@@ -496,7 +476,56 @@
 
     <div class="page__footer-container">
       <footer class="page__footer">
-        
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
         <div class="page__footer-follow">
   <ul class="social-icons">
     

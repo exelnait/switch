@@ -105,28 +105,8 @@
 <![endif]-->
 
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	  
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 300) {
-				$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-			});
-			  
-			$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 600);
-			return false;
-		});
-	  
-	});
-</script>
-
-<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </head>
 
   <body class="layout--single">
@@ -378,51 +358,54 @@
 
 </div></details>
 
-<h3 id="что-понадобится">Что понадобится</h3>
+<h2 id="что-понадобится">Что понадобится</h2>
 
 <ul>
-  <li>Свежая версия пейлоада <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
-  <span class="bottom">
-      Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+  <li>Свежая версия пейлоада <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip_container">
+  <a href="kefir" target="_blank">kefir</a>
+  <span class="tooltip"><i class="fas fa-caret-down"></i>
+      <span class="bottom">
+          Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+      </span>
   </span>
 </span></li>
-  <li>Работающая microSD с не менее чем 32 Гб свободного места, вставленная в Switch в формате exFAT (не обязательно при резервном копировании на ПК)
+  <li>Работающая microSD, с не менее чем 32 Гб свободного места, в формате exFAT (не обязательно при резервном копировании на ПК)
     <ul>
       <li>Не важно поддерживает ли уже ваш Switch exFAT или нет в самой прошивке, всё равно в гекате используйте карту в exFAT</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="резервное-копирование">Резервное копирование</h3>
+<h2 id="резервное-копирование">Резервное копирование</h2>
 
-<h4 id="часть-i---дампим-nand">Часть I - Дампим NAND</h4>
+<h3 id="часть-i---дампим-nand">Часть I - Дампим NAND</h3>
 
 <details class="spoiler"><summary class="spoiler-title">Способ I - на приставке через hekate</summary><div class="spoiler-body">
-<p class="notice--info">Этот способ требует наличия карты памяти не менее 32-х Гб. Если у вас нет таковой, но есть карта меньшего размера, бекап будет делаться по частям. После заполнения текущего объёма на карте на экране будет выведена информация о том, что вам необходимо перенести папку backup на ПК, затем вернуть карту в консоль и продолжить создание резервной копии. После того, как все части бекапа будут находиться в одной папке на компьютере, их нужно склеить, используя скрипт <a href="https://github.com/CTCaer/hekate/releases/download/v4.2/joiner_scripts_for_windows_linux_macos.zip" target="_blank">joiner_scripts_for_windows_linux_macos.zip</a>. Этот способ рассматриваться подробно не будет. Он занимает <strong>намного</strong> больше времени.</p>
+<p class="notice--info">Этот способ требует карты памяти с не менее чем 32-мя Гб свободного места. Если у вас нет таковой, но есть карта меньшего размера, бекап будет делаться по частям. После заполнения текущего объёма на карте на экране будет выведена информация о том, что вам необходимо перенести папку backup на ПК, затем вернуть карту в консоль и продолжить создание резервной копии. После того, как все части бекапа будут находиться в одной папке на компьютере, их нужно склеить, используя скрипт <a href="https://github.com/CTCaer/hekate/releases/download/v4.2/joiner_scripts_for_windows_linux_macos.zip" target="_blank">joiner_scripts_for_windows_linux_macos.zip</a>. Этот способ рассматриваться подробно не будет. Он занимает <strong>намного</strong> больше времени.</p>
 
 <ol>
-  <li>Войдите в <span class="tooltip">hekate
- <span class="bottom">
-     Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+  <li>Войдите в <span class="tooltip_container">
+ hekate
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+     </span>
  </span>
-</span> с помощью поддерживаемого на вашей приставке эксплойта:
-    <ul>
-      <li>Пропустите этот шаг, если вы уже в hekate</li>
-      <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
- <span class="bottom">
-  Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+</span> с помощью поддерживаемого на вашей приставке эксплойта, запуститив пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
  </span>
-</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a>
+</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или воспользовавшись <a href="caffeine" target="_blank">Caffeine</a>.
+    <ol>
+      <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate
         <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
+          <li>Пропустите этот шаг, если вы уже в hekate</li>
         </ul>
       </li>
-      <li>Воспользуйтесь <a href="caffeine" target="_blank">Caffeine</a> для загрузки hekate
-        <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
-        </ul>
-      </li>
-    </ul>
+    </ol>
   </li>
   <li>Перейдите в меню “<strong>Tools</strong>” -&gt; “<strong>Backup eMMC</strong>”</li>
   <li>Выберите “<strong>eMMC RAW GPP</strong>”
@@ -472,14 +455,14 @@
 <p><strong>Выберите вашу операционную систему:</strong></p>
 
 <details class="spoiler"><summary class="spoiler-title">Windows</summary><div class="spoiler-body">
-<h5 id="что-понадобится">Что понадобится</h5>
+<h2 id="что-понадобится">Что понадобится</h2>
 
 <ul>
   <li>Свежая версия <a href="https://github.com/eliboa/TegraRcmGUI/releases/latest" target="_blank">TegraRcmGUI</a></li>
   <li>Свежая версия <a href="http://hddguru.com/software/HDD-Raw-Copy-Tool/HDDRawCopy1.10Portable.exe" target="_blank">HDD Raw Copy Tool</a></li>
 </ul>
 
-<h5 id="установка-драйверов">Установка драйверов</h5>
+<h3 id="установка-драйверов">Установка драйверов</h3>
 
 <p>Если драйвера уже были установлены, пропустите эту часть</p>
 
@@ -490,10 +473,10 @@
   <li>После успешной установки драйвера закройте программу</li>
 </ol>
 
-<h5 id="резервное-копирование">Резервное копирование</h5>
+<h3 id="резервное-копирование">Резервное копирование</h3>
 
 <ol>
-  <li>Запустите “Диспетчер устройств”, убедитесь, что там, в дереве “<strong>Дисковые устройства</strong>” появилось устройство с названием “<strong>LINUX UMS DISK 0</strong>”
+  <li>Запустите “<strong>Диспетчер устройств</strong>”, убедитесь, что там, в дереве “<strong>Дисковые устройства</strong>” появилось устройство с названием “<strong>LINUX UMS DISK 0</strong>”
     <ul>
       <li>Если такового там нет,
         <ul>
@@ -540,31 +523,31 @@
 
 </div></details>
 
-<h4 id="часть-ii---дампим-boot01">Часть II - Дампим BOOT0/1</h4>
+<h3 id="часть-ii---дампим-boot01">Часть II - Дампим BOOT0/1</h3>
 <details class="spoiler"><summary class="spoiler-title">Способ I - на приставке через hekate</summary><div class="spoiler-body">
 <ol>
-  <li>Войдите в <span class="tooltip">hekate
- <span class="bottom">
-     Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+  <li>Войдите в <span class="tooltip_container">
+ hekate
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+     </span>
  </span>
-</span> с помощью поддерживаемого на вашей приставке эксплойта:
-    <ul>
-      <li>Пропустите этот шаг, если вы уже в hekate</li>
-      <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
- <span class="bottom">
-  Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+</span> с помощью поддерживаемого на вашей приставке эксплойта, запуститив пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
  </span>
-</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a>
+</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или воспользовавшись <a href="caffeine" target="_blank">Caffeine</a>.
+    <ol>
+      <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate
         <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
+          <li>Пропустите этот шаг, если вы уже в hekate</li>
         </ul>
       </li>
-      <li>Воспользуйтесь <a href="caffeine" target="_blank">Caffeine</a> для загрузки hekate
-        <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
-        </ul>
-      </li>
-    </ul>
+    </ol>
   </li>
   <li>Перейдите в меню “<strong>Tools</strong>” -&gt; “<strong>Backup eMMC</strong>”</li>
   <li>Выберите “<strong>eMMC BOOT0 &amp; BOOT1</strong>”</li>
@@ -576,35 +559,38 @@
 <p>Делайте аналогичным способом, как делали <strong>Дамп NAND</strong>, но вместо “ums_<strong>eMMC</strong>.ini” выбирайте “ums_<strong>boot0</strong>.ini” для дампа BOOT0 и “ums_<strong>boot1</strong>.ini” для дампа BOOT1</p>
 </div></details>
 
-<h4 id="часть-iii---дампим-ключи">Часть III - Дампим ключи</h4>
+<h3 id="часть-iii---дампим-ключи">Часть III - Дампим ключи</h3>
 
 <ol>
-  <li>Войдите в <span class="tooltip">hekate
- <span class="bottom">
-     Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+  <li>Войдите в <span class="tooltip_container">
+ hekate
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+     </span>
  </span>
-</span> с помощью поддерживаемого на вашей приставке эксплойта:
-    <ul>
-      <li>Пропустите этот шаг, если вы уже в hekate</li>
-      <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
- <span class="bottom">
-  Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+</span> с помощью поддерживаемого на вашей приставке эксплойта, запуститив пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
  </span>
-</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a>
+</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или воспользовавшись <a href="caffeine" target="_blank">Caffeine</a>.
+    <ol>
+      <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate
         <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
+          <li>Пропустите этот шаг, если вы уже в hekate</li>
         </ul>
       </li>
-      <li>Воспользуйтесь <a href="caffeine" target="_blank">Caffeine</a> для загрузки hekate
-        <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
-        </ul>
-      </li>
-    </ul>
+    </ol>
   </li>
-  <li>Установите <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
- <span class="bottom">
-     Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+  <li>Установите <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
  </span>
 </span> по инструкции, находящейся в его репозитории
     <ul>
@@ -613,15 +599,14 @@
   </li>
   <li>Перейдите в меню “<strong>Payloads</strong>”
     <ul>
-      <li>Если на карте не установлен <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
- <span class="bottom">
-  Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+      <li>Если на карте не установлен <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+  <span class="bottom">
+      Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+  </span>
  </span>
-</span>, то <span class="tooltip">hekate
- <span class="bottom">
-  Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
- </span>
-</span> загрузится без графического интерфейса. В таком случае <code class="highlighter-rouge">payloads</code> будет находиться в меню <code class="highlighter-rouge">Launch</code>, а навигация по hekate будет происходить с помощью кнопок громкости и кнопки включения</li>
+</span>, то hekate загрузится без графического интерфейса. В таком случае <code class="highlighter-rouge">payloads</code> будет находиться в меню <code class="highlighter-rouge">Launch</code>, а навигация по hekate будет происходить с помощью кнопок громкости и кнопки включения</li>
     </ul>
   </li>
   <li>Выберите “<strong>Lockpick_RCM.bin</strong>”</li>
@@ -639,7 +624,7 @@
   <li>Выберите “<strong>Power off</strong>”, чтобы выключить приставку</li>
 </ol>
 
-<h4 id="часть-iv---копирование-резервной-копии-на-пк">Часть IV - Копирование резервной копии на ПК</h4>
+<h3 id="часть-iv---копирование-резервной-копии-на-пк">Часть IV - Копирование резервной копии на ПК</h3>
 
 <ol>
   <li>Вставьте карту памяти консоли в ПК</li>
@@ -651,11 +636,11 @@
 <p class="text-center notice--info">В общем случае, бекап должен выглядить примерно так: <br /><br />
 <img src="/images/screenshots/backup.png" alt="" /></p>
 
-<h3 id="восстановление-резервной-копии">Восстановление резервной копии</h3>
+<h2 id="восстановление-резервной-копии">Восстановление резервной копии</h2>
 
-<p>Никогда не восстанавливайте чужой бекап на свою консоль! Восстановив чужой бекап вы получите брик. Если у вас при этом нет собственного бекапа, то брик будет не восстановимый.</p>
+<p class="notice--danger">Никогда не восстанавливайте чужой бекап на свою консоль! Восстановив чужой бекап вы получите брик. Если у вас при этом нет собственного бекапа, то брик будет не восстановимый.</p>
 
-<h4 id="восстановление-через-hekate">Восстановление через hekate</h4>
+<h3 id="восстановление-через-hekate">Восстановление через hekate</h3>
 
 <ol>
   <li>На ПК перейдите в папку со своими резервными копиями</li>
@@ -669,28 +654,28 @@
     <p class="text-center notice--info"><img src="/images/screenshots/restore.png" alt="" /></p>
   </li>
   <li>Переместите папку <code class="highlighter-rouge">backup</code> в корень карты памяти вашей консоли</li>
-  <li>Войдите в <span class="tooltip">hekate
- <span class="bottom">
-     Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+  <li>Войдите в <span class="tooltip_container">
+ hekate
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Кастомный бутлоадер для Nintendo Switch. С его помощью мы делаем резервное копирование, запускаем кастом, а так же предотвращаем сгорание предохранителей. Один из самых важных инструментов из тех, что мы будем использовать.
+     </span>
  </span>
-</span> с помощью поддерживаемого на вашей приставке эксплойта:
-    <ul>
-      <li>Пропустите этот шаг, если вы уже в hekate</li>
-      <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip"><a href="https://github.com/rashevskyv/switch/releases/latest" target="_blank">kefir</a>
- <span class="bottom">
-  Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+</span> с помощью поддерживаемого на вашей приставке эксплойта, запуститив пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip_container">
+ <a href="kefir" target="_blank">kefir</a>
+ <span class="tooltip"><i class="fas fa-caret-down"></i>
+     <span class="bottom">
+         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
+     </span>
  </span>
-</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a>
+</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или воспользовавшись <a href="caffeine" target="_blank">Caffeine</a>.
+    <ol>
+      <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate
         <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
+          <li>Пропустите этот шаг, если вы уже в hekate</li>
         </ul>
       </li>
-      <li>Воспользуйтесь <a href="caffeine" target="_blank">Caffeine</a> для загрузки hekate
-        <ul>
-          <li>Удерживайте (VOL-) на приставке во время появления логотипа kefir, чтобы попасть в hekate</li>
-        </ul>
-      </li>
-    </ul>
+    </ol>
   </li>
   <li>Перейдите в <code class="highlighter-rouge">Tools -&gt; Restore</code> и выберите “<strong>Restore eMMC”</strong></li>
   <li>Выберите “<strong>eMMC BOOT0 &amp; BOOT1</strong>” для восстановления BOOT0 и BOOT1</li>
@@ -699,7 +684,7 @@
   <li>Не забудьте удалить с карты памяти папку <code class="highlighter-rouge">backup</code> после окончания восстановления и проверки работоспособности консоли после восстановления</li>
 </ol>
 
-<h4 id="восстановление-через-пк">Восстановление через ПК</h4>
+<h3 id="восстановление-через-пк">Восстановление через ПК</h3>
 
 <p>Восстановление проводится ровно через те же самые программы, что и делалась резервная копия, за исключением того, что вы сперва выбираете файл резервной копии, а потом диск, на который она будет восстанавливаться</p>
 
@@ -736,7 +721,56 @@
 
     <div class="page__footer-container">
       <footer class="page__footer">
-        
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
         <div class="page__footer-follow">
   <ul class="social-icons">
     

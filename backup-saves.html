@@ -13,7 +13,7 @@
 
 
 
-<title>Резервное копирование и восстановление сохранений с помощью Checkpoint - Взлом Switch</title>
+<title>Резервное копирование и восстановление сохранений с помощью DBI - Взлом Switch</title>
 
 
 
@@ -27,7 +27,7 @@
 
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Взлом Switch">
-<meta property="og:title" content="Резервное копирование и восстановление сохранений с помощью Checkpoint">
+<meta property="og:title" content="Резервное копирование и восстановление сохранений с помощью DBI">
 
 
   <link rel="canonical" href="https://switch.customfw.xyz/backup-saves.html">
@@ -105,28 +105,8 @@
 <![endif]-->
 
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	  
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 300) {
-				$('.scrollup').fadeIn();
-			} else {
-				$('.scrollup').fadeOut();
-			}
-			});
-			  
-			$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 600);
-			return false;
-		});
-	  
-	});
-</script>
-
-<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </head>
 
   <body class="layout--single">
@@ -316,14 +296,14 @@
  
   
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Резервное копирование и восстановление сохранений с помощью Checkpoint">
+    <meta itemprop="headline" content="Резервное копирование и восстановление сохранений с помощью DBI">
     
     
     
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Резервное копирование и восстановление сохранений с помощью Checkpoint
+          <h1 class="page__title" itemprop="headline">Резервное копирование и восстановление сохранений с помощью DBI
 </h1>
           
         </header>
@@ -337,6 +317,7 @@
 <ul class="toc__menu" id="markdown-toc">
   <li><a href="#создание-резервных-копий-сохранений" id="markdown-toc-создание-резервных-копий-сохранений">Создание резервных копий сохранений</a></li>
   <li><a href="#восстановление-резервных-копий-сохранений" id="markdown-toc-восстановление-резервных-копий-сохранений">Восстановление резервных копий сохранений</a></li>
+  <li><a href="#использование-чужих-сохранений" id="markdown-toc-использование-чужих-сохранений">Использование чужих сохранений</a></li>
 </ul>
 
   </nav>
@@ -356,31 +337,39 @@
 
 <ol>
   <li>Запустите <a href="hbl" target="_blank">Homebrew Launcher</a></li>
-  <li>Запустите <strong>Checkpoint</strong></li>
-  <li>Выберите аккаунт для которого хотите создать резервную копию, с помощью клавиши (ZR) или (ZL)</li>
-  <li>Выделите игры для сохранений которых хотите создать резервную копию, с помощью клавиши (Y)
+  <li>Запустите <strong>JKSV</strong></li>
+  <li>Выберите профиль для которого хотите создать резервную копию</li>
+  <li>Нажмите (Y), чтобы сделать резервную копию всех сохранений для выбранного профиля
     <ul>
-      <li>Если вы хотите выбрать все, зажмите (Y)</li>
+      <li>Если вы хотите выбрать какую-то одну игру, то нажмите на ней (A) и создайте бекап нужного сохранения, выбрав пункт <strong>New</strong></li>
     </ul>
   </li>
-  <li>Нажмите на клавишу (L) для того, чтобы сделать резервные копии сохранений выбранных игр</li>
-  <li>При необходимости повторите для каждого из аккаунтов</li>
-  <li>Резервные копии сохранений находятся на карте памяти по пути <code class="highlighter-rouge">switch/checkpoint/saves</code>. Скопируйте папку <code class="highlighter-rouge">saves</code> в надёжное место</li>
+  <li>Резервные копии сохранений находятся в корне карты памяти в папке <code class="highlighter-rouge">/JKSV</code>. Скопируйте папку <code class="highlighter-rouge">JKSV</code> в надёжное место</li>
 </ol>
 
 <h2 id="восстановление-резервных-копий-сохранений">Восстановление резервных копий сохранений</h2>
 
 <ol>
-  <li>Убедитесь, что резервные копии необходимых сохранений находится по пути <code class="highlighter-rouge">switch/checkpoint/saves</code> на вашей карте памяти</li>
+  <li>Убедитесь, что резервные копии необходимых сохранений находится в папке <code class="highlighter-rouge">JKSV</code>, которая находится в корне карты памяти</li>
   <li>Запустите <a href="hbl" target="_blank">Homebrew Launcher</a></li>
-  <li>Запустите <strong>Checkpoint</strong></li>
+  <li>Запустите <strong>JKSV</strong></li>
   <li>Выберите в списке игру для которой хотите восстановить резервную копию сохранения и нажмите (A)
     <ul>
       <li>Если вы не видите нужную игру в списке, запустите её и поиграйте немного, чтобы консоль создала все необходимые записи в системе. Как правило достаточно просто запустить игру</li>
     </ul>
   </li>
-  <li>Выберите нужное сохранение из списка и нажмите на нём (A), нажмите (A), чтобы подтвердить восстановление</li>
+  <li>Выберите нужное сохранение из списка и нажмите на нём (A), затем удерживайте (A), чтобы подтвердить восстановление</li>
   <li>Повторите для каждой игры, для которой хотите восстановить резервную копию сохранения</li>
+</ol>
+
+<h2 id="использование-чужих-сохранений">Использование чужих сохранений</h2>
+
+<ol>
+  <li>Создайте сохранение для необходимой игры</li>
+  <li>Перейдите в папку <code class="highlighter-rouge">JKSV/название_игры</code></li>
+  <li>Найдите папку с последней созданной резервной копией и удалите всё, что внутри неё</li>
+  <li>Поместите файлы чужого сохранения в эту папку</li>
+  <li>Восстановите последнее сохранение</li>
 </ol>
 
 				
@@ -410,7 +399,56 @@
 
     <div class="page__footer-container">
       <footer class="page__footer">
-        
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 300) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+			});
+			  
+			$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+	  
+	});
+
+	$(document).ready(function() {
+    $('input').change(function() {
+    $('div.hideble').hide();
+      if ($('input[value="button1').is(':checked')) {
+        $('div.button1').show();
+      }
+      else if ($('input[value="button2').is(':checked')) {
+        $('div.button2').show();
+      }
+      else if ($('input[value="button3').is(':checked')) {
+        $('div.button3').show();
+      }
+      else {
+        $('div.hideble').hide();
+      }
+    });
+  });
+  
+
+var ref=document.referrer;
+var refArr=ref.split('/');
+ref=refArr[3];
+//alert(ref);
+
+if (ref=='preparation-fuse') {document.getElementById('selector').classList.add('hide');}
+
+</script>
+
+<script src="https://switch.customfw.xyz/assets/js/main.min.js"></script>
+
         <div class="page__footer-follow">
   <ul class="social-icons">
     
