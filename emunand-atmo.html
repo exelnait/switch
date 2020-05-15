@@ -30,8 +30,8 @@
 <meta property="og:title" content="Установка EmuNAND">
 
 
-  <link rel="canonical" href="https://switch.customfw.xyz/emunand.html">
-  <meta property="og:url" content="https://switch.customfw.xyz/emunand.html">
+  <link rel="canonical" href="https://switch.customfw.xyz/emunand-atmo.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/emunand-atmo.html">
 
 
 
@@ -315,14 +315,10 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#что-нужно-знать-про-emunand" id="markdown-toc-что-нужно-знать-про-emunand">Что нужно знать про EmuNAND</a></li>
-  <li><a href="#подготовительные-работы" id="markdown-toc-подготовительные-работы">Подготовительные работы</a></li>
-  <li><a href="#создание-emunand" id="markdown-toc-создание-emunand">Создание EmuNAND</a>    <ul>
-      <li><a href="#настройка-emunand" id="markdown-toc-настройка-emunand">Настройка EmuNAND</a></li>
-      <li><a href="#запуск-прошивки" id="markdown-toc-запуск-прошивки">Запуск прошивки</a></li>
-      <li><a href="#важно-знать" id="markdown-toc-важно-знать">Важно знать</a></li>
-    </ul>
-  </li>
+  <li><a href="#отмена-внесённый-sx-os-изменений" id="markdown-toc-отмена-внесённый-sx-os-изменений">Отмена внесённый SX OS изменений</a></li>
+  <li><a href="#настройка-emunand" id="markdown-toc-настройка-emunand">Настройка EmuNAND</a></li>
+  <li><a href="#запуск-прошивки" id="markdown-toc-запуск-прошивки">Запуск прошивки</a></li>
+  <li><a href="#важно-знать" id="markdown-toc-важно-знать">Важно знать</a></li>
 </ul>
 
   </nav>
@@ -338,193 +334,13 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 
 <hr />
 
-<p class="notice--info">Для уже прошитых пользователей, которые хотят восстановить возможность играть онлайн на уже прошитой приставке, а пиратить исключительно в EmuNAND есть отдельная инструкция - <a href="preparation-white" target="blank_">Переход на EmuNAND для уже прошитых</a></p>
+<p class="notice--warning">Если вы попали на эту страницу, значит у вас возникли проблемы при создании файлового EmuNAND через SX OS. Эта инструкция начинается ровно с того самого места, где вы нажали на ссылку и не рассказывает о создании эмунанда с самого начала.</p>
 
-<h2 id="что-нужно-знать-про-emunand">Что нужно знать про EmuNAND</h2>
-
-<details class="spoiler"><summary class="spoiler-title">Что такое EmuNAND</summary><div class="spoiler-body">
-<p><strong>EmuNAND</strong> - это копия системной прошивки, расположенная на карте памяти, из которой загружается система. Как правило, EmuNAND используется не один, а в связке с SysNAND. Обычно SysNAND используют для игры онлайн в купленные или официально скачанные из eShop игры. Если не запускать на SysNAND пиратку, то шанс, что его забанят крайне невысок. EmuNAND же наоборот, используют как раз для запуска пиратки. В нём специальным образом удаляют серийный номер приставки, так что даже при работающем интернет-подключении, Nintendo не может отследить что на приставке было запущено неавторизированное ПО.</p>
-</div></details>
-
-<details class="spoiler"><summary class="spoiler-title">Зачем нам EmuNAND</summary><div class="spoiler-body">
-<h3 id="emunand-вам-может-понадобиться-если">EmuNAND вам может понадобиться если…</h3>
-
-<ul>
-  <li>вы хотите играть онлайн в купленные\бесплатные игры.
-    <ul>
-      <li>В таком случае вы будете загружаться в EmuNAND для игры в пиратку, а <span class="tooltip_container">
-  SysNAND
-  <span class="tooltip"><i class="fas fa-caret-down"></i>
-  <span class="bottom">
-  Как правило, под этим термином подразумевается прошивка, запущенная из внутренней памяти приставки (не из EmuNAND). Приставка из магазина будет идти именно с такой прошивкой. 
-  Часто SysNAND является антонимом к EmuNAND. То есть, EmuNAND - это копия SysNAND, расположенная на карте памяти, соответственно, SysNAND - это прошивка, находящаяся в системной памяти приставки. В SysNAND не обязательно должна быть оригинальная прошивка. Главное правило - запуск из внутренней памяти приставки.
-  </span>
-  </span>
-</span> использовать исключительно для игры в лицензию. В этом случае шанс бана существенно ниже.</li>
-    </ul>
-  </li>
-  <li>вы используете <span class="tooltip_container">
-  Caffeine
-  <span class="tooltip"><i class="fas fa-caret-down"></i>
-      <span class="bottom">
-          Это эксплойт, позволяющая запустить hekate из браузера на приставке с прошивкой 4.1.0. В данный момент это единственный способ запустить прошивку на патченных юнитах. Работает ТОЛЬКО при запуске из официальной прошивки, поэтому сильно важно, чтобы официальная прошивка всегда оставалась с версией системного ПО 4.1.0
-      </span>
-  </span>
-</span>
-    <ul>
-      <li>В таком случае у вас нет выбора и единственный способ прошить приставку - использовать EmuNAND</li>
-    </ul>
-  </li>
-</ul>
-
-<p>В иных случаях EmuNAND не обязателен. То есть, если вы собираетесь просто играть в пиратку и вам не интересен онлайн, то от EmuNAND пользы не будет.</p>
-
-<p class="notice--info">Если вы очень хотите играть онлайн, но вас уже забанили, то EmuNAND вам не поможет.</p>
-
-</div></details>
-
-<details class="spoiler"><summary class="spoiler-title">Можно ли работать без EmuNAND</summary><div class="spoiler-body">
-<p>Да, вполне. Если вам не нужен онлайн и вы не используете <span class="tooltip_container">
-	Caffeine
-	<span class="tooltip"><i class="fas fa-caret-down"></i>
-		<span class="bottom">
-			Это эксплойт, позволяющая запустить hekate из браузера на приставке с прошивкой 4.1.0. В данный момент это единственный способ запустить прошивку на патченных юнитах. Работает ТОЛЬКО при запуске из официальной прошивки, поэтому сильно важно, чтобы официальная прошивка всегда оставалась с версией системного ПО 4.1.0
-		</span>
-	</span>
-</span>, EmuNAND вам не понадобится.</p>
-</div></details>
-
-<details class="spoiler"><summary class="spoiler-title">Сколько EmuNAND занимает места</summary><div class="spoiler-body">
-<p>Как правило, размер EmuNAND равен размеру внутренней памяти приставки, то есть 32Гб. Имейте ввиду, что для создания EmuNAND мы разделим вашу карту на два раздела, последний из которых будет содержать EmuNAND и не будет виден из системы (будет скрыт).</p>
-</div></details>
-
-<details class="spoiler"><summary class="spoiler-title">Подводные камни и недостатки использования EmuNAND</summary><div class="spoiler-body">
-<p>EmuNAND можно создать в виде отдельного раздела на карте памяти, либо в виде файлов. В гайде рассмотрен именно второй вариант. Почему, вы поймёте ниже.</p>
-
-<h3 id="emunand-на-разделе">EmuNAND на разделе</h3>
-<ul>
-  <li><em>Сложности с переносом на другую карту памяти</em> - требует расширенных знаний для работы с файловой системой, а так же ПК с установленным сторонним софтом</li>
-  <li><em>Сложности с бекаком на ПК</em> - требуется использование стороннего ПО</li>
-  <li><em>Занимает 32Гб не карте памяти</em> - размер EmuNAND создаётся равным размеру внутренней памяти приставки, потому размер вашей карты памяти будет на 32Гб меньше изначального.</li>
-</ul>
-
-<h3 id="emunand-в-виде-файлов">EmuNAND в виде файлов</h3>
-<ul>
-  <li><em>Игры, установленные во внутреннюю память EmuNAND могут глючить</em> - возможно, со временем эта проблема будет решена в самой Atmosphere, мы же в гайде решим её по своему, создав EmuNAND на карте памяти всего лишь в 10Гб размером, таким образом размер внутренней памяти будет достаточен лишь для того, чтобы хранить данные самой консоли и пользовательские сохранения, а все игры будут устанавливаться на карту памяти.</li>
-</ul>
-
-<p>Как вы можете заметить, минусов у файлового эмунанда заметно меньше.</p>
-
-</div></details>
-
-<details class="spoiler"><summary class="spoiler-title">Как перенести EmuNAND на другую карту</summary><div class="spoiler-body">
-<p>Если EmuNAND сделан на отдельном разделе, то следует воспользоваться программой <a href="https://gbatemp.net/threads/emutool-move-partition-emu-on-another-sd-switch-emu-type-on-sxos-and-more.550756/" target="blank_">EmuTool</a>. Если же EmuNAND создан в виде файлов (именно такой создаётся в процессе выполнения этого руководства), то он переносится простым копированием</p>
-</div></details>
-
-<details class="spoiler"><summary class="spoiler-title">Как сделать резервную копию EmuNAND на ПК</summary><div class="spoiler-body">
-<p>Для создания резервной копии EmuNAND достаточно просто скопировать на ПК папку <code class="highlighter-rouge">emummc</code>, если у вас Atmosphere или <code class="highlighter-rouge">sxos/emunand</code>, если у вас SX OS</p>
-</div></details>
-
-<p>Для запуска приставки в SysNAND мы всё равно будем использовать Atmosphere, чтобы защитить предохранители в случае случайного обновления прошивки. Это делается для того, чтобы вы всегда имели возможность откатиться на последнюю рабочую прошивку в том случае, если после случайного обновления кастом ещё не будет поддерживать новую версию системного ПО. Так же это сохранит AutoRCM, если он включён, после обновления прошивки через интернет. Atmosphere будет использована, даже если у вас SX OS, поскольку последний не умеет защищать предохранители после установки обновления через интернет. В запущенном таким образом SysNAND вы не сможете использовать пиратку, даже если очень захотите, однако <a href="hbl" target="blank_">HBL</a> будет доступен, что позволит нам провести безопасное обновление прошивки.</p>
-
-<p>В данный момент ещё нет всех необходимый инструментов, чтобы запускать SysNAND без кастома и пользоваться всеми преимуществами, которые он даёт для безопасности при обновлении, сохранении фьюзов и прочее. Поэтому, если вы считаете, что запуск Atmosphere приведёт вас к бану (а в теории это не так, Atmosphere никак себя не выдаёт при правильном её использовании, хотя всякое конечно может быть), дождитесь других инструментов и не используйте онлайн! Если вам наплевать на предохранители, просто отключайте autorcm и запускайте приставку без Fusée Gelée.</p>
-
-<p class="notice--warning">После выполнения каждой инструкции из нижеследующего списка, возвращайтесь на эту страницу и переходите к следующему пункту. Если какие-то из действий вы уже выполняли, повторно их делать не нужно.</p>
-
-<h2 id="подготовительные-работы">Подготовительные работы</h2>
-<ol>
-  <li>Запустите приставку и <strong>выберите светлую тему</strong> в настройка Switch, а так же <strong>переименуйте ваш аккаунт в “SysNAND”</strong>
-    <ul>
-      <li>Это необходимо сделать для того, чтобы вы всегда могли визуально отличить EmuNAND от SysNAND.</li>
-      <li>Вы можете наоборот поставить тёмную тему в SYSNAND, а светлую в EmuNAND - это не имеет значения/ Главное, чтобы вы могли отличить оба раздела визуально.</li>
-    </ul>
-  </li>
-  <li>Вставьте карту памяти в ПК и скопируйте всё её содержимое на ПК
-    <ul>
-      <li>Следующий шаг уничтожит все данные на вашей карте памяти, поэтому перенесите их на ПК</li>
-      <li>Все установленные на карту памяти игры находятся в папке <code class="highlighter-rouge">Nintendo</code></li>
-      <li>Все сохранения находятся во внутренней памяти приставки и <strong>не</strong> будут удавлены, даже в том случае, если вы проигнорируете этот шаг</li>
-    </ul>
-  </li>
-  <li><a href="http://customfw.xyz/format_sd" target="_blank">Отформатируйте вашу карту памяти в FAT32</a>
-    <ul>
-      <li>Да, именно в FAT32. Нет, проблем с файлами больше 4Гб не будет</li>
-      <li>Делайте это даже в том случае, если ваша карта памяти не содержит данных</li>
-      <li>Делайте именно по этой инструкции</li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="создание-emunand">Создание EmuNAND</h2>
-
-<p class="notice--warning">Для создания EmuNAND мы будем использовать бесплатную версию SX OS вне зависимости от того, какую CFW вы планируете использовать в дальнейшем.</p>
-
-<p class="notice--warning">Перед созданием EmuNAND рекомендуется полностью очистить содержимое внутренней памяти приставки, а именно, удалить все игры из неё.</p>
-
-<p>План действия простой - создаём через SXOS во внутренней памяти приставки EmuNAND размером в 10ГБ и переносим его на карту памяти, после чего подключаем к Atmosphere. Таким образом размер EmuNAND у нас будет 10Гб.</p>
+<h3 id="отмена-внесённый-sx-os-изменений">Отмена внесённый SX OS изменений</h3>
 
 <ol>
-  <li>Установите <strong>SX OS</strong> с помощью <span class="tooltip_container">
- <a href="kefir" target="_blank">kefir</a>
- <span class="tooltip"><i class="fas fa-caret-down"></i>
-     <span class="bottom">
-         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
-     </span>
- </span>
-</span>, если ещё не сделали этого
-    <ul>
-      <li>Инструкция по установке находится в репозитории <span class="tooltip_container">
- <a href="kefir" target="_blank">kefir</a>
- <span class="tooltip"><i class="fas fa-caret-down"></i>
-  <span class="bottom">
-      Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
-  </span>
- </span>
-</span> по ссылке</li>
-    </ul>
-  </li>
-  <li>Запустите <span class="tooltip_container">
- кастом
- <span class="tooltip"><i class="fas fa-caret-down"></i>
-     <span class="bottom">
-         Модифицированное программное обеспечение консоли, написанное энтузиастами, позволяет делать вещи, недоступные пользователям официальных прошивок, например, запускать неподписанные приложения. В контексте прошивки свитча мы будем называть имеющееся программное обеспечение кастомной прошивкой, хотя, чисто технически, это не так
-     </span>
- </span>
-</span> с помощью поддерживаемого на вашей приставке эксплойта:
-    <ul>
-      <li>Запустите пейлоад <code class="highlighter-rouge">payload.bin</code> из <code class="highlighter-rouge">.7z</code>-архива <span class="tooltip_container">
- <a href="kefir" target="_blank">kefir</a>
- <span class="tooltip"><i class="fas fa-caret-down"></i>
-  <span class="bottom">
-      Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
-  </span>
- </span>
-</span> с помощью <a href="fusee-gelee" target="_blank">Fusée Gelée</a> или воспользуйтесь <a href="caffeine" target="_blank">Caffeine</a> для загрузки кастома</li>
-    </ul>
-  </li>
-  <li><strong>Удерживайте (VOL+) при появлении сплешскрина SX OS</strong></li>
-  <li>Приставка должна загрузиться в загрузчик SX OS
-    <ul>
-      <li>Если загрузка зависла на белом экране, или в любом другом месте, перегрузите консоль, удерживая кнопку (POWER) 15 секунд и повторите запуск снова</li>
-    </ul>
-  </li>
-  <li>Нажмите “<strong>Options</strong>” -&gt; “<strong>EmuNAND</strong>” -&gt; “<strong>Create EmuNAND</strong>” -&gt; <strong>Files on System Storage</strong> -&gt; <strong>Avanced…</strong></li>
-  <li>Если вы хотите перенести свой профиль из SysNAND в EmuNAND, то убедитесь, что в пункте <strong>Copy USER partition to EmuNAND</strong> стоит <strong>Yes</strong>
-    <ul>
-      <li>В норме процесс создания эмунанда во внутренней памяти занимает не больше получаса. Если вы видите, что в вашем случае это не так, то вам придётся делать EmuANND через hekate. Как это сделать, <a href="emunand_atmo">описано здесь</a>.</li>
-    </ul>
-  </li>
-  <li>В пункте <strong>Select EmuNAND Size</strong> выберите <strong>10GB</strong>
-    <ul>
-      <li>Количество выбранных гигабайт напрямую влияет на количество свободного места во внутренней памяти EmuNAND. Если вы хотите использовать внутреннюю память для установки в неё игр, то выбирайте максимальное значение.</li>
-      <li>Если при создании EmuNAND вы получаете ошибку, освободите больше места в NAND консоли (желательно вдвое больше, чем размер EmuNAND)</li>
-    </ul>
-  </li>
-  <li>Нажмите кнопку <strong>Done</strong> -&gt; <strong>Continue</strong> и дождитесь окончания создания EmuNAND
-    <ul>
-      <li>Ошибка <code class="highlighter-rouge">Errorcode=FFFFFD63</code> говорит о том, что в NAND недостаточно свободного места для создания EmuNAND</li>
-    </ul>
-  </li>
+  <li>Нажмите <strong>Cancel</strong>, чтобы отменить создание EmuNAND, если ещё не сделали этого</li>
+  <li>Нажмите “<strong>Options</strong>” -&gt; “<strong>EmuNAND</strong>” -&gt; “<strong>Delete EmuNAND</strong>” -&gt; “<strong>Files on System Storage</strong>” -&gt; <strong>Continue</strong></li>
 </ol>
 
 <p>Перейдите к настройке EmuNAND, выбрав спойлер ниже, в зависимости от того, какую кастомную прошивку вы будете использовать в дальнейшем.</p>
@@ -535,15 +351,6 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 <p class="notice--info">Вы продолжаете выполнять инструкцию, находясь в опциях SXOS</p>
 
 <ol>
-  <li>Нажмите <strong>Back</strong></li>
-  <li>Нажмите “<strong>Options</strong>” -&gt; “<strong>EmuNAND</strong>” -&gt; “<strong>Move EmuNAND to microSD</strong>” -&gt; <strong>Continue</strong></li>
-  <li>Дождитесь окончания переноса EmuNAND на карту памяти
-    <ul>
-      <li>В результате мы получим EmuNAND размером 10Гб на нашей карте памяти, чего с головой хватит для внутренних нужд самой приставки. А игры мы будем устанавливать на карту памяти, что работает весьма стабильно на Atmosphere с картами формата FAT32</li>
-    </ul>
-  </li>
-  <li>Нажмите <strong>Back</strong></li>
-  <li>Нажмите “<strong>Options</strong>” -&gt; “<strong>EmuNAND</strong>” -&gt; “<strong>Delete EmuNAND</strong>” -&gt; “<strong>Files on System Storage</strong>” -&gt; <strong>Continue</strong></li>
   <li>Нажмите <strong>Poweroff</strong>, чтобы выключить приставку</li>
   <li>Установите Atmosphere с помощью <span class="tooltip_container">
  <a href="kefir" target="_blank">kefir</a>
@@ -587,31 +394,11 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
       </li>
     </ol>
   </li>
-  <li>
-    <p>Перейдите в раздел “<strong>emuMMC</strong>”</p>
-
-    <p class="text-center"><img src="/images/screenshots/hekate/emummc.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Выберите “<strong>Migrate emuMMC</strong>”</p>
-
-    <p class="text-center"><img src="/images/screenshots/hekate/migrate.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Нажмите “<strong>Continue</strong>”</p>
-
-    <p class="text-center"><img src="/images/screenshots/hekate/migrate_continue.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Нажмите “<strong>Change emuMMC</strong>”</p>
-
-    <p class="text-center"><img src="/images/screenshots/hekate/change.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Выберите созданный emuMMC в разделе <strong>SD File Based</strong></p>
-
-    <p class="text-center"><img src="/images/screenshots/hekate/sd_based.png" alt="" /></p>
-
+  <li>Перейдите в раздел “<strong>emuMMC</strong>”</li>
+  <li>Выберите “<strong>Migrate emuMMC</strong>”</li>
+  <li>Нажмите “<strong>Continue</strong>”</li>
+  <li>Нажмите “<strong>Change emuMMC</strong>”</li>
+  <li>Выберите созданный emuMMC в разделе <strong>SD File Based</strong>
     <ul>
       <li>Если вы видите надпись “<strong>Enabled</strong>” в секции <strong>emuMMC Info &amp; Selection</strong>, то всё сделано правильно и EmuNAND создан и правильно сконфигурирован, если видите “<strong>Disabled</strong>”, то проделайте предыдущие два пункта ещё раз.</li>
     </ul>
