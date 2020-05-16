@@ -30,8 +30,8 @@
 <meta property="og:title" content="Установка EmuNAND">
 
 
-  <link rel="canonical" href="https://switch.customfw.xyz/emunand-atmo.html">
-  <meta property="og:url" content="https://switch.customfw.xyz/emunand-atmo.html">
+  <link rel="canonical" href="https://switch.customfw.xyz/emunand_atmo.html">
+  <meta property="og:url" content="https://switch.customfw.xyz/emunand_atmo.html">
 
 
 
@@ -395,10 +395,9 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
     </ol>
   </li>
   <li>Перейдите в раздел “<strong>emuMMC</strong>”</li>
-  <li>Выберите “<strong>Migrate emuMMC</strong>”</li>
-  <li>Нажмите “<strong>Continue</strong>”</li>
-  <li>Нажмите “<strong>Change emuMMC</strong>”</li>
-  <li>Выберите созданный emuMMC в разделе <strong>SD File Based</strong>
+  <li>Выберите “<strong>Create emuMMC</strong>”</li>
+  <li>Нажмите “<strong>SD File</strong>” и дождитесь окончания бекапа.</li>
+  <li>Нажмите “<strong>Close</strong>”
     <ul>
       <li>Если вы видите надпись “<strong>Enabled</strong>” в секции <strong>emuMMC Info &amp; Selection</strong>, то всё сделано правильно и EmuNAND создан и правильно сконфигурирован, если видите “<strong>Disabled</strong>”, то проделайте предыдущие два пункта ещё раз.</li>
     </ul>
@@ -411,27 +410,6 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
     <p class="text-center"><img src="/images/screenshots/hekate/close.png" alt="" /></p>
   </li>
   <li>Нажмите “<strong>Home</strong>” для возвращения на стартовый экран hekate</li>
-  <li>Извлеките карту памяти из приставки и поместите её в ПК</li>
-  <li>Установите <strong>Atmosphere</strong> с помощью <span class="tooltip_container">
- <a href="kefir" target="_blank">kefir</a>
- <span class="tooltip"><i class="fas fa-caret-down"></i>
-     <span class="bottom">
-         Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
-     </span>
- </span>
-</span>
-    <ul>
-      <li>Инструкция по установке находится в репозитории <span class="tooltip_container">
- <a href="kefir" target="_blank">kefir</a>
- <span class="tooltip"><i class="fas fa-caret-down"></i>
-  <span class="bottom">
-      Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
-  </span>
- </span>
-</span> по ссылку</li>
-    </ul>
-  </li>
-  <li>Верните карту памяти в приставку</li>
 </ol>
 
 <p class="notice--info">Вы можете создать несколько разделов EmuNAND таким же способом и переключаться между ними через раздел “<strong>Change emuMMC</strong>”. Таким образом, например, можно создать второй emuMMC на приставка с Caffeine, обновить его официально и начать использовать на нём лицензию (да, играть онлайн тоже можно) и только её. Это относительно безопасный способ сесть на оба стула, впрочем, 100% гарантии того, что рано или поздно вас не забанят нет, хотя, по нашим сведениям, шанс бана при использовании официальной прошивки через EmuNAND, ничтожно мал. Для того, чтобы создать ещё один EmuNAND, следуйте инструкции на этой странице с самого начала.</p>
@@ -439,7 +417,10 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 </div></details>
 
 <details class="spoiler"><summary class="spoiler-title">Настройка EmuNAND на SX OS</summary><div class="spoiler-body">
-<p>EmuNAND в SX OS не требует дополнительной настройки.</p>
+<ol>
+  <li>Нажмите “<strong>EmuNAND</strong>” -&gt; “<strong>Create EmuNAND</strong>” -&gt; <strong>Files on MicroSD</strong></li>
+  <li>Дождитесь окончания создания EmuNAND</li>
+</ol>
 </div></details>
 
 <h3 id="запуск-прошивки">Запуск прошивки</h3>
@@ -616,6 +597,21 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 </ol>
 
 <p class="notice--warning">Помните, что файл конфигурации будет перезаписан при обновлении кефира <strong>не</strong> через скрипт.</p>
+
+</div></details>
+
+<details class="spoiler"><summary class="spoiler-title">Запуск SX OS помощью донгла SX OS Pro</summary><div class="spoiler-body">
+<h3 id="запуск-emunand">Запуск EmuNAND</h3>
+
+<p>Запустите приставку с помощью донгла через <a href="fusee-gelee" target="_blank">Fusée Gelée</a>. Приставка автоматически загрузится в SX OS</p>
+
+<h3 id="запуск-sysnand">Запуск SysNAND</h3>
+
+<ol>
+  <li>Запустите приставку с помощью донгла через <a href="fusee-gelee" target="_blank">Fusée Gelée</a></li>
+  <li>Зажмите и удерживайте кнопку (VOL+) на загрузочном экране SX OS</li>
+  <li>Выберите “<strong>Boot Oficial FW</strong>”</li>
+</ol>
 
 </div></details>
 
