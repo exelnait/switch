@@ -317,11 +317,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 <ul class="toc__menu" id="markdown-toc">
   <li><a href="#что-понадобится" id="markdown-toc-что-понадобится">Что понадобится</a></li>
   <li><a href="#подготовительные-работы" id="markdown-toc-подготовительные-работы">Подготовительные работы</a></li>
-  <li><a href="#инструкция" id="markdown-toc-инструкция">Инструкция</a>    <ul>
-      <li><a href="#часть-i---установка-форвардера-hbl" id="markdown-toc-часть-i---установка-форвардера-hbl">Часть I - Установка форвардера HBL</a></li>
-      <li><a href="#часть-ii---работа-с-hbl" id="markdown-toc-часть-ii---работа-с-hbl">Часть II - Работа с HBL</a></li>
-    </ul>
-  </li>
+  <li><a href="#работа-с-hbl" id="markdown-toc-работа-с-hbl">Работа с HBL</a></li>
 </ul>
 
   </nav>
@@ -343,7 +339,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 
 <p>Существуют два режима работы Homebrew, запущенных через Homebrew launcher (HBL): режим апплета и режим тайтла. В первом случае приложению доступно только 400Мб из всей памяти консоли, во втором - вся память (4Gb). Некоторые приложения, например Checkpoint, Edizon, Tinfoil, не будут работать в режиме апплета, поскольку им необходима вся доступная память приставки (кому-то для поиска читов, кому-то из-за плохой оптимизации). В atmosphere для запуска HBL в режиме тайтла, нужно запускать игру, удерживая (R) (держать кнопку нужно до тех пор, пока не запустится HBL). Или использовать форвардер. В случае же с SX OS, при запуске Альбомов их проприетарный Homebrew Launcher и так запустится в режиме тайтла.</p>
 
-<h1 id="что-понадобится">Что понадобится</h1>
+<h2 id="что-понадобится">Что понадобится</h2>
 
 <ul>
   <li><a href="cfw" target="_blank">Запущенная CFW</a></li>
@@ -357,7 +353,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 </span></li>
 </ul>
 
-<h1 id="подготовительные-работы">Подготовительные работы</h1>
+<h2 id="подготовительные-работы">Подготовительные работы</h2>
 
 <ol>
   <li>Выключите Switch и вставьте его карту памяти в ПК</li>
@@ -379,47 +375,21 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 </span></a></li>
 </ol>
 
-<h1 id="инструкция">Инструкция</h1>
+<h2 id="работа-с-hbl">Работа с HBL</h2>
 
-<h2 id="часть-i---установка-форвардера-hbl">Часть I - Установка форвардера HBL</h2>
-
-<ol>
-  <li>
-    <p>Запустите Альбомы, удерживая клавишу (R)</p>
-
-    <p class="text-center notice--info"><img src="/images/screenshots/gallery.jpg" alt="" /></p>
-  </li>
-  <li>Запустите DBI и установите <code class="highlighter-rouge">games/hbmenu.nsp</code> по <a href="games" target="_blank">этой</a> инструкции
-    <ul>
-      <li>Если у вас нет <code class="highlighter-rouge">hbmenu.nsp</code> в папке <code class="highlighter-rouge">games</code>, обновите <span class="tooltip_container">
- <a href="kefir" target="_blank">kefir</a>
- <span class="tooltip"><i class="fas fa-caret-down"></i>
-  <span class="bottom">
-      Сборник, состоящий из выбранного кастома, необходимых программ и скриптов, которые все это установят правильным образом. Состав кефира и инструкцию по установке можно посмотреть в его репозитории
-  </span>
- </span>
-</span></li>
-    </ul>
-  </li>
-  <li>После окончания установки, выйдите в главное меню нажатием кнопки (HOME)</li>
-</ol>
-
-<h2 id="часть-ii---работа-с-hbl">Часть II - Работа с HBL</h2>
-
-<ol>
-  <li>Запускайте HBL с помощью Homebrew Menu, который мы установили выше
-    <ul>
-      <li>При его запуске Homebrew всегда будет запускаться в режиме тайтла</li>
-    </ul>
-  </li>
+<ul>
+  <li>Для запуска в режиме апплета, запустите Альбомы, удерживая клавишу (R)
+  <img src="/images/screenshots/gallery.jpg" alt="" /></li>
+  <li>Для запуска в режиме тайтла, запустите любую игру, удерживая клавишу (R)</li>
   <li>Для установки приложений хоумбрю просто скопируйте файл <code class="highlighter-rouge">.nro</code> в папку <code class="highlighter-rouge">/switch/</code> на SD-карте.
     <ul>
-      <li>Используйте <strong>DBI</strong> для копирования homebrew не выключая приставки</li>
-      <li>Вы можете так же смонтировать карту памяти через hekate</li>
+      <li>Используйте <strong>DBI</strong> для копирования homebrew в режиме MTP. Для этого подключите приставку к ПК кабелем, запустите DBI и нажмите (X) в главном меню программы</li>
+      <li>Вы можете так же смонтировать карту памяти через hekate (<strong>Tools</strong> -&gt; <strong>USB Tools</strong> -&gt; <strong>SD Card</strong>)</li>
     </ul>
   </li>
   <li>Список доступных приложений ищите в <a href="https://www.switchbru.com/appstore/#/" target="_blank">Switch Appstore</a></li>
-</ol>
+  <li><a href="https://vk.com/@pg_testing-homebrew-apps-for-switch">Список полезных Homebrew приложений для Switch</a></li>
+</ul>
 
 <div class="notice--warning">
 <p>Если в списке приложений пусто, снимите с файлов архивные атрибуты:</p>
@@ -441,10 +411,6 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 </ul>
 
 </div>
-
-<ul>
-  <li><a href="https://vk.com/@pg_testing-homebrew-apps-for-switch">Список полезных Homebrew приложений для Switch</a></li>
-</ul>
 
 <hr />
 
