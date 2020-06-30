@@ -6685,3 +6685,6 @@ li > p:first-child {
   color: dark-green;
   font-weight: bold;
   box-shadow: none; }
+
+.scrollup {
+  z-index: 9999; }
