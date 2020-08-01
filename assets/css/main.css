@@ -2390,7 +2390,7 @@ tr, td, th { vertical-align: middle; }
 
 .toc__menu li ul > li a { padding-left: 1.75rem; font-weight: normal; }
 
-.toc__menu li > ul li { display: none; }
+.toc__menu li > ul li { display: block; }
 
 @media (min-width: 48em) { .toc__menu li > ul li { display: block; } }
 
@@ -3234,5 +3234,11 @@ li > p:first-child { margin-top: 0; }
 .select_fw > input:checked + label { background-color: #a5dc86; color: dark-green; font-weight: bold; box-shadow: none; }
 
 .scrollup { z-index: 9999; }
+
+.author__urls-wrapper button { height: 50px !important; min-width: 100px !important; }
+
+.toc__menu { /* hide sub sub links on small screens*/ }
+
+.toc__menu li > ul li { display: block; }
 
 /*# sourceMappingURL=main.css.map */
