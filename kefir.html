@@ -315,7 +315,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 <nav class="toc">
     <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Разделы</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#kefir-477" id="markdown-toc-kefir-477">KEFIR 477</a>    <ul>
+  <li><a href="#kefir-476" id="markdown-toc-kefir-476">KEFIR 476</a>    <ul>
       <li><a href="#что-такое-кефир" id="markdown-toc-что-такое-кефир">Что такое кефир</a></li>
       <li><a href="#инструкция-по-установке-kefir" id="markdown-toc-инструкция-по-установке-kefir">Инструкция по установке kefir</a></li>
       <li><a href="#важная-информация" id="markdown-toc-важная-информация"><strong>Важная информация!</strong></a></li>
@@ -337,7 +337,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 
 <hr />
 
-<h2 id="kefir-477">KEFIR 477</h2>
+<h2 id="kefir-476">KEFIR 476</h2>
 
 <p class="text-center"><img src="/images/kefir.png" alt="kefir" width="70%" /></p>
 
@@ -433,20 +433,14 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 <h3 id="подключение-карты-памяти-приставки-к-пк">Подключение карты памяти приставки к ПК:</h3>
 
 <ol>
-  <li><strong>Смонтировав карту памяти через hekate</strong>
+  <li><strong>Вставив карту памяти в ПК (не рекомендуется для пользователей MacOS)</strong>
     <ol>
       <li>Перезагрузите приставку через меню, вызываемое удерживанием кнопки (POWER)</li>
       <li>На сплеш-скрине кефира нажмите кнопку понижения громкости, чтобы попасть в hekate</li>
-      <li>Находясь в hekate перейдите в <strong>Tools</strong> -&gt; <strong>USB Tools</strong> -&gt; <strong>SD Card</strong>. Ваша карта памяти смонтируется на вашем ПК
-        <ul>
-          <li>Фактически ваш свитч будет использоваться в виде картридера</li>
-          <li>Вместо этого вы можете просто вытащить карту памяти из приставки и вставить её в ПК, однако лучше всего приучить себя этого не делать, поскольку слот для карты памяти на приставке весьма хлипкий</li>
-        </ul>
-      </li>
-      <li>Как закончите, <a href="https://ru.wikipedia.org/wiki/Безопасное_извлечение_устройства" target="_blank">безопасно извлеките</a> вашу карту памяти из ПК (устройство будет называться “<strong>UMS</strong>”) и нажмите в hekate “<strong>Close</strong>”</li>
+      <li>Теперь вы можете извлечь карту памяти из ПК и вставить её в свитч. При вытаскивании карты памяти в hekate, вам не нужно булет заново пробрасывать пейлоад, чтобы войти в прошивку. Достаточно вставить карту в консоль и запустить прошивку через меню <strong>Launch</strong></li>
     </ol>
   </li>
-  <li><strong>С помощью DBI</strong>
+  <li><strong>С помощью DBI (рекомендуется для пользователей MacOS и других ОС тоже)</strong>
     <ol>
       <li>Запустите DBI через <a href="hbl" target="_blank">HBL</a></li>
       <li>Подключите консоль к ПК по USB-кабелю</li>
@@ -583,7 +577,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 <h3 id="изменения-от-прошлой-версии">Изменения от прошлой версии</h3>
 
 <ul>
-  <li>[Обновлено] Atmosphere 0.14.1 - форк с поддержкой 10.2.0? исправлена ошибка в Super Mario All-Stars</li>
+  <li>[Обновлено] Atmosphere 0.14.1 - форк для кефира с рядом изменений, в том числе с поддержкой 10.2.0</li>
   <li>[Обновлено] SXOS 3.0.5beta - с полной поддержкой 10.2.0</li>
   <li>[Обновлено] hekate 5.3.3 с полной поддержкой 10.2.0</li>
   <li>[Обновлено] Сигпатчи с поддержкой 10.2.0</li>
@@ -596,7 +590,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
   <li>[Изменено] Кефир снова работает на чистой атмосфере (настолько чистой, насколько это возможно для
 обеспечения совместимости с tinfoil и поддержки установки по USB)</li>
   <li>[Исправлено] Ошибка, из-за которой не работали картриджи на Atmosphere</li>
-  <li>[Исправлено] FreshHay - заменена ссылка на 10.2.0</li>
+  <li>[Исправлено] FreshHay - качает прошивку для Daybreak</li>
   <li>[Заменено] LinkUser уступил место linkalho. Программа привязывает аккаунт не удаляя его</li>
 </ul>
 
